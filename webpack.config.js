@@ -2,12 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 console.log(__dirname)
 module.exports = {
-  mode: 'development', // Вы можете изменить на 'production' для продакшен сборки
-  entry: './src/index.tsx', // Начальная точка входа
+  mode: 'development',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '/layout-of-the-test-site/',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
