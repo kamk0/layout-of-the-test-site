@@ -1,9 +1,15 @@
 import React, {FC} from "react";
 import heroBg from '@images/bg1.jpg';
+
 import earth from '@images/EARTH.png';
 import Button from "../../atoms/button/button";
+import {HeroRepository} from "./hero.repository";
+import Picture from "../../atoms/picture/picture";
 
 const Hero: FC = () => {
+  const pictureData = HeroRepository.getBgParams();
+  const heroImagePictureData = HeroRepository.getHeroImage();
+
   return (
     <section className="hero">
       <div className="content hero__content">
@@ -15,22 +21,17 @@ const Hero: FC = () => {
           <Button href={`#`} className={'c-yellow'}>Learn more</Button>
         </div>
         <div className="hero__image">
-          <picture>
-            <img decoding="async" src={earth}
-                 loading="lazy" alt="image"/>
-          </picture>
+          <Picture
+            {...heroImagePictureData}
+            className="hero"
+          />
         </div>
       </div>
       <div className="hero__bg">
-        <picture className="hero__picture">
-          <img
-            className="hero__bg-image"
-            decoding="async"
-            src={heroBg}
-            loading="lazy"
-            alt="image"
-          />
-        </picture>
+        <Picture
+          {...pictureData}
+          className="hero-bg"
+        />
       </div>
     </section>
   )

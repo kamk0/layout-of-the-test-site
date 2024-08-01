@@ -1,5 +1,6 @@
 import React, {FC} from "react";
 import {Card} from "../card/card";
+import {PictureData} from "../../atoms/picture/picture.interfaces";
 
 export type CardType = {
   id: number,
@@ -8,6 +9,7 @@ export type CardType = {
   image: string,
   link: string,
   textLink: string,
+  pictureData: PictureData,
 }
 
 type CardsProps = {
@@ -15,7 +17,18 @@ type CardsProps = {
 }
 
 export const Cards: FC<CardsProps> = ({cards}: CardsProps) => {
-  const cardItems = cards.map(({title, subtitle, link, textLink, image, id}, index) => {
+  const cardItems = cards.map((
+    {
+      title,
+      subtitle,
+      link,
+      textLink,
+      image,
+      id,
+      pictureData
+    },
+    index,
+  ) => {
     const isBigCard = index === 0 || index === 3;
 
     return <Card
@@ -26,6 +39,7 @@ export const Cards: FC<CardsProps> = ({cards}: CardsProps) => {
       link={link}
       textLink={textLink}
       isBigCard={isBigCard}
+      pictureData={pictureData}
     />
   })
 
