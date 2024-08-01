@@ -70,13 +70,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/UI/atoms/picture/picture.tsx":
+/*!*****************************************************!*\
+  !*** ./src/components/UI/atoms/picture/picture.tsx ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nconst Picture = _ref => {\n  let {\n    dataSrc,\n    sources,\n    className,\n    width,\n    height,\n    alt\n  } = _ref;\n  const getImageType = srcset => {\n    const parts = srcset.split('.');\n    return parts[parts.length - 1];\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"picture\", {\n    className: \"\".concat(className, \"__picture\")\n  }, dataSrc && sources && sources.map((source, index) => {\n    if (source.dataSrcset) {\n      const imageType = getImageType(source.dataSrcset);\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"source\", {\n        key: index,\n        srcSet: source.dataSrcset,\n        type: imageType === 'webp' ? 'image/webp' : 'image/jpeg',\n        media: source.media || ''\n      });\n    }\n    return null;\n  }), dataSrc && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    className: \"\".concat(className, \"__image\"),\n    src: dataSrc,\n    width: width || '350',\n    height: height || '525',\n    alt: alt || ''\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Picture);\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/atoms/picture/picture.tsx?");
+
+/***/ }),
+
 /***/ "./src/components/UI/molecules/card/card.tsx":
 /*!***************************************************!*\
   !*** ./src/components/UI/molecules/card/card.tsx ***!
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Card: () => (/* binding */ Card)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _atoms_button_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../atoms/button/button */ \"./src/components/UI/atoms/button/button.tsx\");\n/* harmony import */ var _atoms_button_button_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../atoms/button/button.helper */ \"./src/components/UI/atoms/button/button.helper.ts\");\n\n\n\nconst Card = _ref => {\n  let {\n    index,\n    title,\n    subtitle,\n    image,\n    link,\n    textLink,\n    isBigCard\n  } = _ref;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"article\", {\n    key: index,\n    className: \"card \".concat(isBigCard ? 'card_large' : '')\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"picture\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    className: \"card__image\",\n    decoding: \"async\",\n    src: image,\n    loading: \"lazy\",\n    alt: \"image\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"card__content\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n    className: \"card__title \".concat(isBigCard ? 't-h1' : 't-h3')\n  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n    className: \"card__title \".concat(isBigCard ? 't-h5' : 't-h6')\n  }, subtitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_atoms_button_button__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    href: link,\n    theme: _atoms_button_button_helper__WEBPACK_IMPORTED_MODULE_2__.ButtonTheme.EMPTY\n  }, textLink)));\n};\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/molecules/card/card.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Card: () => (/* binding */ Card)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _atoms_button_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../atoms/button/button */ \"./src/components/UI/atoms/button/button.tsx\");\n/* harmony import */ var _atoms_button_button_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../atoms/button/button.helper */ \"./src/components/UI/atoms/button/button.helper.ts\");\n/* harmony import */ var _atoms_picture_picture__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../atoms/picture/picture */ \"./src/components/UI/atoms/picture/picture.tsx\");\nfunction _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }\n\n\n\n\nconst Card = _ref => {\n  let {\n    index,\n    title,\n    subtitle,\n    image,\n    link,\n    textLink,\n    isBigCard,\n    pictureData\n  } = _ref;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"article\", {\n    key: index,\n    className: \"card \".concat(isBigCard ? 'card_large' : '')\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_atoms_picture_picture__WEBPACK_IMPORTED_MODULE_3__[\"default\"], _extends({}, pictureData, {\n    className: 'card'\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"card__content\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n    className: \"card__title \".concat(isBigCard ? 't-h1' : 't-h3')\n  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n    className: \"card__title \".concat(isBigCard ? 't-h5' : 't-h6')\n  }, subtitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_atoms_button_button__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    href: link,\n    theme: _atoms_button_button_helper__WEBPACK_IMPORTED_MODULE_2__.ButtonTheme.EMPTY\n  }, textLink)));\n};\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/molecules/card/card.tsx?");
 
 /***/ }),
 
@@ -86,7 +96,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Cards: () => (/* binding */ Cards)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../card/card */ \"./src/components/UI/molecules/card/card.tsx\");\n\n\nconst Cards = _ref => {\n  let {\n    cards\n  } = _ref;\n  const cardItems = cards.map((_ref2, index) => {\n    let {\n      title,\n      subtitle,\n      link,\n      textLink,\n      image,\n      id\n    } = _ref2;\n    const isBigCard = index === 0 || index === 3;\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_card__WEBPACK_IMPORTED_MODULE_1__.Card, {\n      index: id,\n      title: title,\n      subtitle: subtitle,\n      image: image,\n      link: link,\n      textLink: textLink,\n      isBigCard: isBigCard\n    });\n  });\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"cards\"\n  }, cardItems);\n};\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/molecules/cards/cards.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Cards: () => (/* binding */ Cards)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../card/card */ \"./src/components/UI/molecules/card/card.tsx\");\n\n\nconst Cards = _ref => {\n  let {\n    cards\n  } = _ref;\n  const cardItems = cards.map((_ref2, index) => {\n    let {\n      title,\n      subtitle,\n      link,\n      textLink,\n      image,\n      id,\n      pictureData\n    } = _ref2;\n    const isBigCard = index === 0 || index === 3;\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_card_card__WEBPACK_IMPORTED_MODULE_1__.Card, {\n      index: id,\n      title: title,\n      subtitle: subtitle,\n      image: image,\n      link: link,\n      textLink: textLink,\n      isBigCard: isBigCard,\n      pictureData: pictureData\n    });\n  });\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"cards\"\n  }, cardItems);\n};\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/molecules/cards/cards.tsx?");
 
 /***/ }),
 
@@ -106,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   FooterRepository: () => (/* binding */ FooterRepository)\n/* harmony export */ });\n/* harmony import */ var _images_rocket_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @images/rocket.png */ \"./src/images/rocket.png\");\n\nclass FooterRepository {\n  static getFooter() {\n    return {\n      text: \"Exciting space adventure!\",\n      icon: {\n        src: _images_rocket_png__WEBPACK_IMPORTED_MODULE_0__,\n        alt: \"Logo\"\n      }\n    };\n  }\n}\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/footer/footer.repository.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   FooterRepository: () => (/* binding */ FooterRepository)\n/* harmony export */ });\n/* harmony import */ var _images_rocket_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @images/rocket.png */ \"./src/images/rocket.png\");\n/* harmony import */ var _images_rocket_webp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @images/rocket.webp */ \"./src/images/rocket.webp\");\n\n\nclass FooterRepository {\n  static getImage() {\n    return {\n      sources: [{\n        dataSrcset: _images_rocket_webp__WEBPACK_IMPORTED_MODULE_1__\n      }],\n      dataSrc: _images_rocket_png__WEBPACK_IMPORTED_MODULE_0__,\n      width: 93,\n      height: 81,\n      alt: 'rocket'\n    };\n  }\n  static getFooter() {\n    return {\n      text: \"Exciting space adventure!\",\n      pictureData: FooterRepository.getImage()\n    };\n  }\n}\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/footer/footer.repository.ts?");
 
 /***/ }),
 
@@ -116,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _footer_repository__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.repository */ \"./src/components/UI/organisms/footer/footer.repository.ts\");\n\n\nconst Footer = () => {\n  const {\n    text,\n    icon\n  } = _footer_repository__WEBPACK_IMPORTED_MODULE_1__.FooterRepository.getFooter();\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"footer\", {\n    className: \"footer\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"footer__container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    src: icon.src,\n    alt: \"{icon.alt}\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n    className: \"t-small c-yellow\"\n  }, text)));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/footer/footer.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _footer_repository__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.repository */ \"./src/components/UI/organisms/footer/footer.repository.ts\");\n/* harmony import */ var _atoms_picture_picture__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../atoms/picture/picture */ \"./src/components/UI/atoms/picture/picture.tsx\");\n\n\n\nconst Footer = () => {\n  const {\n    text,\n    pictureData\n  } = _footer_repository__WEBPACK_IMPORTED_MODULE_1__.FooterRepository.getFooter();\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"footer\", {\n    className: \"footer\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"footer__container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_atoms_picture_picture__WEBPACK_IMPORTED_MODULE_2__[\"default\"], pictureData), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n    className: \"t-small c-yellow\"\n  }, text)));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/footer/footer.tsx?");
 
 /***/ }),
 
@@ -130,13 +140,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/UI/organisms/hero/hero.repository.ts":
+/*!*************************************************************!*\
+  !*** ./src/components/UI/organisms/hero/hero.repository.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   HeroRepository: () => (/* binding */ HeroRepository)\n/* harmony export */ });\n/* harmony import */ var _images_bg1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @images/bg1.jpg */ \"./src/images/bg1.jpg\");\n/* harmony import */ var _images_bg1_webp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @images/bg1.webp */ \"./src/images/bg1.webp\");\n/* harmony import */ var _images_bg1_360_webp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @images/bg1-360.webp */ \"./src/images/bg1-360.webp\");\n/* harmony import */ var _images_bg1_768_webp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @images/bg1-768.webp */ \"./src/images/bg1-768.webp\");\n/* harmony import */ var _images_bg1_360_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @images/bg1_360.jpg */ \"./src/images/bg1_360.jpg\");\n/* harmony import */ var _images_bg1_768_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @images/bg1_768.jpg */ \"./src/images/bg1_768.jpg\");\n/* harmony import */ var _images_EARTH_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @images/EARTH.png */ \"./src/images/EARTH.png\");\n/* harmony import */ var _images_earth_webp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @images/earth.webp */ \"./src/images/earth.webp\");\n\n\n\n\n\n\n\n\nclass HeroRepository {\n  static getSource() {\n    return [{\n      dataSrcset: _images_bg1_768_webp__WEBPACK_IMPORTED_MODULE_3__,\n      media: \"(max-width: 767px and min-width: 376px)\"\n    }, {\n      dataSrcset: _images_bg1_768_jpg__WEBPACK_IMPORTED_MODULE_5__,\n      media: \"(max-width: 767px and min-width: 376px)\"\n    }, {\n      dataSrcset: _images_bg1_360_webp__WEBPACK_IMPORTED_MODULE_2__,\n      media: \"(max-width: 375px)\"\n    }, {\n      dataSrcset: _images_bg1_360_jpg__WEBPACK_IMPORTED_MODULE_4__,\n      media: \"(max-width: 375px)\"\n    }, {\n      dataSrcset: _images_bg1_webp__WEBPACK_IMPORTED_MODULE_1__\n    }];\n  }\n  static getImage() {\n    return {\n      dataSrc: _images_bg1_jpg__WEBPACK_IMPORTED_MODULE_0__,\n      width: 1905,\n      height: 469,\n      alt: 'hero'\n    };\n  }\n  static getBgParams() {\n    return {\n      sources: HeroRepository.getSource(),\n      ...HeroRepository.getImage()\n    };\n  }\n  static getHeroImage() {\n    return {\n      sources: [{\n        dataSrcset: _images_earth_webp__WEBPACK_IMPORTED_MODULE_7__\n      }],\n      dataSrc: _images_EARTH_png__WEBPACK_IMPORTED_MODULE_6__,\n      width: 327,\n      height: 367,\n      alt: 'earth'\n    };\n  }\n}\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/hero/hero.repository.ts?");
+
+/***/ }),
+
 /***/ "./src/components/UI/organisms/hero/hero.tsx":
 /*!***************************************************!*\
   !*** ./src/components/UI/organisms/hero/hero.tsx ***!
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _images_bg1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @images/bg1.jpg */ \"./src/images/bg1.jpg\");\n/* harmony import */ var _images_EARTH_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @images/EARTH.png */ \"./src/images/EARTH.png\");\n/* harmony import */ var _atoms_button_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../atoms/button/button */ \"./src/components/UI/atoms/button/button.tsx\");\n\n\n\n\nconst Hero = () => {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"section\", {\n    className: \"hero\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"content hero__content\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero__container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", {\n    className: \"hero__title t-h2\"\n  }, \"Discover the vast expanses of \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", {\n    className: \"c-pink\"\n  }, \"space\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n    className: \"hero__subtitle t-h4\"\n  }, \"Where the possibilities are \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", {\n    className: \"c-yellow\"\n  }, \"endless!\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_atoms_button_button__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    href: \"#\",\n    className: 'c-yellow'\n  }, \"Learn more\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero__image\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"picture\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    decoding: \"async\",\n    src: _images_EARTH_png__WEBPACK_IMPORTED_MODULE_2__,\n    loading: \"lazy\",\n    alt: \"image\"\n  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero__bg\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"picture\", {\n    className: \"hero__picture\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    className: \"hero__bg-image\",\n    decoding: \"async\",\n    src: _images_bg1_jpg__WEBPACK_IMPORTED_MODULE_1__,\n    loading: \"lazy\",\n    alt: \"image\"\n  }))));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hero);\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/hero/hero.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _atoms_button_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../atoms/button/button */ \"./src/components/UI/atoms/button/button.tsx\");\n/* harmony import */ var _hero_repository__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./hero.repository */ \"./src/components/UI/organisms/hero/hero.repository.ts\");\n/* harmony import */ var _atoms_picture_picture__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../atoms/picture/picture */ \"./src/components/UI/atoms/picture/picture.tsx\");\nfunction _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }\n\n\n\n\nconst Hero = () => {\n  const pictureData = _hero_repository__WEBPACK_IMPORTED_MODULE_2__.HeroRepository.getBgParams();\n  const heroImagePictureData = _hero_repository__WEBPACK_IMPORTED_MODULE_2__.HeroRepository.getHeroImage();\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"section\", {\n    className: \"hero\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"content hero__content\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero__container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h1\", {\n    className: \"hero__title t-h2\"\n  }, \"Discover the vast expanses of \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", {\n    className: \"c-pink\"\n  }, \"space\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n    className: \"hero__subtitle t-h4\"\n  }, \"Where the possibilities are \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", {\n    className: \"c-yellow\"\n  }, \"endless!\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_atoms_button_button__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    href: \"#\",\n    className: 'c-yellow'\n  }, \"Learn more\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero__image\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_atoms_picture_picture__WEBPACK_IMPORTED_MODULE_3__[\"default\"], _extends({}, heroImagePictureData, {\n    className: \"hero\"\n  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"hero__bg\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_atoms_picture_picture__WEBPACK_IMPORTED_MODULE_3__[\"default\"], _extends({}, pictureData, {\n    className: \"hero-bg\"\n  }))));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hero);\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/hero/hero.tsx?");
 
 /***/ }),
 
@@ -166,7 +186,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   OfferRepository: () => (/* binding */ OfferRepository)\n/* harmony export */ });\n/* harmony import */ var _images_bg5_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @images/bg5.jpg */ \"./src/images/bg5.jpg\");\n/* harmony import */ var _images_bg2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @images/bg2.jpg */ \"./src/images/bg2.jpg\");\n/* harmony import */ var _images_bg3_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @images/bg3.jpg */ \"./src/images/bg3.jpg\");\n/* harmony import */ var _images_bg4_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @images/bg4.jpg */ \"./src/images/bg4.jpg\");\n\n\n\n\nclass OfferRepository {\n  static getCards() {\n    return [{\n      id: 1,\n      title: \"Move the borders of reality!\",\n      subtitle: \"Go on a space adventure - it's possible with us!\",\n      image: _images_bg3_jpg__WEBPACK_IMPORTED_MODULE_2__,\n      link: '#',\n      textLink: \"Learn more\"\n    }, {\n      id: 2,\n      title: \"Space is not just stars and planets\",\n      subtitle: \"Go on a space adventure\",\n      image: _images_bg5_jpg__WEBPACK_IMPORTED_MODULE_0__,\n      link: \"#\",\n      textLink: \"Learn more\"\n    }, {\n      id: 3,\n      title: \"For those who dream of stars\",\n      subtitle: \"Our offer: make your dream come true\",\n      image: _images_bg2_jpg__WEBPACK_IMPORTED_MODULE_1__,\n      link: \"#\",\n      textLink: \"Learn more\"\n    }, {\n      id: 4,\n      title: \"Fulfill your fantastic dreams\",\n      subtitle: \"Space has never been so close\",\n      image: _images_bg4_jpg__WEBPACK_IMPORTED_MODULE_3__,\n      link: \"#\",\n      textLink: \"Learn more\"\n    }];\n  }\n}\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/offers/offer.repository.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   OfferRepository: () => (/* binding */ OfferRepository)\n/* harmony export */ });\n/* harmony import */ var _images_bg5_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @images/bg5.jpg */ \"./src/images/bg5.jpg\");\n/* harmony import */ var _images_bg5_webp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @images/bg5.webp */ \"./src/images/bg5.webp\");\n/* harmony import */ var _images_bg5_768_webp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @images/bg5-768.webp */ \"./src/images/bg5-768.webp\");\n/* harmony import */ var _images_bg5_768_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @images/bg5_768.jpg */ \"./src/images/bg5_768.jpg\");\n/* harmony import */ var _images_bg2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @images/bg2.jpg */ \"./src/images/bg2.jpg\");\n/* harmony import */ var _images_bg2_webp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @images/bg2.webp */ \"./src/images/bg2.webp\");\n/* harmony import */ var _images_bg2_768_webp__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @images/bg2-768.webp */ \"./src/images/bg2-768.webp\");\n/* harmony import */ var _images_bg2_768_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @images/bg2_768.jpg */ \"./src/images/bg2_768.jpg\");\n/* harmony import */ var _images_bg3_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @images/bg3.jpg */ \"./src/images/bg3.jpg\");\n/* harmony import */ var _images_bg3_webp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @images/bg3.webp */ \"./src/images/bg3.webp\");\n/* harmony import */ var _images_bg3_768_webp__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @images/bg3-768.webp */ \"./src/images/bg3-768.webp\");\n/* harmony import */ var _images_bg3_768_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @images/bg3_768.jpg */ \"./src/images/bg3_768.jpg\");\n/* harmony import */ var _images_bg4_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @images/bg4.jpg */ \"./src/images/bg4.jpg\");\n/* harmony import */ var _images_bg4_webp__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @images/bg4.webp */ \"./src/images/bg4.webp\");\n/* harmony import */ var _images_bg4_765_webp__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @images/bg4-765.webp */ \"./src/images/bg4-765.webp\");\n/* harmony import */ var _images_bg4_765_jpg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @images/bg4_765.jpg */ \"./src/images/bg4_765.jpg\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nclass OfferRepository {\n  static getPictureSource(sourceArray) {\n    return sourceArray.map(_ref => {\n      let {\n        src,\n        media\n      } = _ref;\n      return {\n        dataSrcset: src,\n        media: media ? \"(max-width: 767px and min-width: 376px)\" : ''\n      };\n    });\n  }\n  static getImage(src) {\n    return {\n      dataSrc: src,\n      width: 1088,\n      height: 350,\n      alt: 'offers'\n    };\n  }\n  static getBgParams(src, sourceArray) {\n    return {\n      sources: OfferRepository.getPictureSource(sourceArray),\n      ...OfferRepository.getImage(src)\n    };\n  }\n  static getCards() {\n    return [{\n      id: 1,\n      title: \"Move the borders of reality!\",\n      subtitle: \"Go on a space adventure - it's possible with us!\",\n      image: _images_bg3_jpg__WEBPACK_IMPORTED_MODULE_8__,\n      link: '#',\n      textLink: \"Learn more\",\n      pictureData: OfferRepository.getBgParams(_images_bg3_jpg__WEBPACK_IMPORTED_MODULE_8__, [{\n        src: _images_bg3_768_webp__WEBPACK_IMPORTED_MODULE_10__,\n        media: 768\n      }, {\n        src: _images_bg3_768_jpg__WEBPACK_IMPORTED_MODULE_11__,\n        media: 768\n      }, {\n        src: _images_bg3_webp__WEBPACK_IMPORTED_MODULE_9__\n      }])\n    }, {\n      id: 2,\n      title: \"Space is not just stars and planets\",\n      subtitle: \"Go on a space adventure\",\n      image: _images_bg5_jpg__WEBPACK_IMPORTED_MODULE_0__,\n      link: \"#\",\n      textLink: \"Learn more\",\n      pictureData: OfferRepository.getBgParams(_images_bg5_jpg__WEBPACK_IMPORTED_MODULE_0__, [{\n        src: _images_bg5_768_webp__WEBPACK_IMPORTED_MODULE_2__,\n        media: 768\n      }, {\n        src: _images_bg5_768_jpg__WEBPACK_IMPORTED_MODULE_3__,\n        media: 768\n      }, {\n        src: _images_bg5_webp__WEBPACK_IMPORTED_MODULE_1__\n      }])\n    }, {\n      id: 3,\n      title: \"For those who dream of stars\",\n      subtitle: \"Our offer: make your dream come true\",\n      image: _images_bg2_jpg__WEBPACK_IMPORTED_MODULE_4__,\n      link: \"#\",\n      textLink: \"Learn more\",\n      pictureData: OfferRepository.getBgParams(_images_bg2_jpg__WEBPACK_IMPORTED_MODULE_4__, [{\n        src: _images_bg2_768_webp__WEBPACK_IMPORTED_MODULE_6__,\n        media: 768\n      }, {\n        src: _images_bg2_768_jpg__WEBPACK_IMPORTED_MODULE_7__,\n        media: 768\n      }, {\n        src: _images_bg2_webp__WEBPACK_IMPORTED_MODULE_5__\n      }])\n    }, {\n      id: 4,\n      title: \"Fulfill your fantastic dreams\",\n      subtitle: \"Space has never been so close\",\n      image: _images_bg4_jpg__WEBPACK_IMPORTED_MODULE_12__,\n      link: \"#\",\n      textLink: \"Learn more\",\n      pictureData: OfferRepository.getBgParams(_images_bg4_jpg__WEBPACK_IMPORTED_MODULE_12__, [{\n        src: _images_bg4_765_webp__WEBPACK_IMPORTED_MODULE_14__,\n        media: 768\n      }, {\n        src: _images_bg4_765_jpg__WEBPACK_IMPORTED_MODULE_15__,\n        media: 768\n      }, {\n        src: _images_bg4_webp__WEBPACK_IMPORTED_MODULE_13__\n      }])\n    }];\n  }\n}\n\n//# sourceURL=webpack://softswiss-test/./src/components/UI/organisms/offers/offer.repository.ts?");
 
 /***/ }),
 
@@ -226,7 +246,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.c-white {\n  color: #FFFFFF;\n}\n\n.c-yellow {\n  color: #EBFF00;\n}\n\n.c-pink {\n  color: #FF70D9;\n}\n\n.t-h1 {\n  font-weight: 900;\n  line-height: 1;\n}\n@media (min-width: 992.1px) {\n  .t-h1 {\n    font-size: 74px;\n  }\n}\n@media (max-width: 992px) {\n  .t-h1 {\n    font-size: 40px;\n  }\n}\n.t-h2 {\n  font-weight: 900;\n  line-height: 1;\n}\n@media (min-width: 992.1px) {\n  .t-h2 {\n    font-size: 72px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-h2 {\n    font-size: 48px;\n  }\n}\n@media (max-width: 680px) {\n  .t-h2 {\n    font-size: 36px;\n  }\n}\n.t-h3 {\n  font-weight: 800;\n  line-height: 1;\n}\n@media (min-width: 992.1px) {\n  .t-h3 {\n    font-size: 46px;\n  }\n}\n@media (max-width: 992px) {\n  .t-h3 {\n    font-size: 40px;\n  }\n}\n.t-h4 {\n  font-weight: 800;\n  line-height: 1.2;\n}\n@media (min-width: 992.1px) {\n  .t-h4 {\n    font-size: 32px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-h4 {\n    font-size: 24px;\n  }\n}\n@media (max-width: 680px) {\n  .t-h4 {\n    font-size: 18px;\n  }\n}\n.t-h5 {\n  font-weight: 800;\n  line-height: 1.2;\n}\n@media (min-width: 992.1px) {\n  .t-h5 {\n    font-size: 26px;\n  }\n}\n@media (max-width: 992px) {\n  .t-h5 {\n    font-size: 16px;\n  }\n}\n.t-h6 {\n  font-weight: 800;\n  line-height: 1.2;\n}\n@media (min-width: 992.1px) {\n  .t-h6 {\n    font-size: 24px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-h6 {\n    font-size: 16px;\n  }\n}\n@media (max-width: 680px) {\n  .t-h6 {\n    font-size: 14px;\n  }\n}\n.t-title {\n  font-size: 32px;\n  font-weight: 800;\n}\n@media (min-width: 992.1px) {\n  .t-title {\n    font-size: 32px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-title {\n    font-size: 24px;\n  }\n}\n@media (max-width: 680px) {\n  .t-title {\n    font-size: 18px;\n  }\n}\n.t-text {\n  font-weight: 700;\n  line-height: 24px;\n}\n@media (min-width: 992.1px) {\n  .t-text {\n    font-size: 20px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-text {\n    font-size: 16px;\n  }\n}\n@media (max-width: 680px) {\n  .t-text {\n    font-size: 14px;\n  }\n}\n.t-button {\n  font-size: 22px;\n  font-weight: 700;\n  line-height: 26px;\n}\n.t-small {\n  font-size: 18px;\n  font-weight: 800;\n  line-height: 28px;\n}\n.t-link {\n  font-weight: 800;\n}\n@media (min-width: 992.1px) {\n  .t-link {\n    font-size: 18px;\n    line-height: 28px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-link {\n    font-size: 16px;\n    line-height: 19px;\n  }\n}\n@media (max-width: 680px) {\n  .t-link {\n    font-size: 14px;\n    line-height: 17px;\n  }\n}\n\nbody {\n  font-family: \"Lato\", sans-serif;\n  font-weight: 800;\n  line-height: 1.2;\n}\n\n.h-one {\n  background-clip: text;\n  background-image: linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%);\n  color: transparent;\n  transition: 300ms ease-in;\n}\n.h-one:hover {\n  color: transparent !important;\n}\n\n* {\n  box-sizing: inherit;\n  padding: 0;\n  margin: 0;\n}\n\n*:focus {\n  outline: none;\n}\n\nhtml {\n  box-sizing: border-box;\n  color: #FFFFFF;\n  width: 100%;\n  min-height: 100%;\n  margin: 0;\n  padding: 0;\n  font-size: 18px;\n  scroll-behavior: smooth;\n}\n\n.content {\n  width: 100vw;\n  margin: 0 auto;\n}\n@media (min-width: 992.1px) {\n  .content {\n    max-width: 1148px;\n  }\n}\n@media (min-width: 768.1px) {\n  .content {\n    padding: 30px 80px;\n  }\n}\n@media (min-width: 468.1px) {\n  .content {\n    padding: 25px 30px;\n  }\n}\n@media (max-width: 468px) {\n  .content {\n    padding: 25px 20px;\n  }\n}\n@media (min-width: 768.1px) {\n  .content_pt {\n    padding-top: 60px;\n  }\n}\n@media (max-width: 768px) {\n  .content_pt {\n    padding-top: 50px;\n  }\n}\n@media (min-width: 768.1px) {\n  .content_pb {\n    padding-bottom: 60px;\n  }\n}\n@media (max-width: 768px) {\n  .content_pb {\n    padding-bottom: 50px;\n  }\n}\n\n.button {\n  color: #000000;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  width: max-content;\n  min-width: 190px;\n  height: 55px;\n  padding: 15px 40px;\n  border-radius: 100px;\n  background: #EBFF00;\n  transition: 300ms ease-in;\n}\n.button:hover {\n  background: rgba(235, 255, 0, 0.6);\n}\n.button_empty {\n  background: transparent;\n  color: #EBFF00;\n  border: 2px solid #EBFF00;\n}\n.button_empty:hover {\n  background: transparent;\n  color: rgba(235, 255, 0, 0.6);\n  border-color: rgba(235, 255, 0, 0.6);\n}\n@media (max-width: 992px) {\n  .button_empty {\n    font-size: 16px;\n    line-height: 19px;\n    min-width: 160px;\n    height: 35px;\n    padding: 0 15px;\n  }\n}\n\n.link {\n  text-decoration: none;\n  transition: 300ms ease-in;\n  color: #EBFF00;\n}\n.link:hover {\n  color: rgba(235, 255, 0, 0.6);\n}\n\n.logo {\n  height: auto;\n}\n@media (min-width: 992.1px) {\n  .logo {\n    width: 104px;\n  }\n}\n@media (max-width: 992px) {\n  .logo {\n    width: 71px;\n  }\n}\n.logo__stop {\n  transition: 300ms ease-in;\n  stop-color: #FF70D9;\n}\n.logo__fill {\n  fill: url(#logoGradient);\n}\n.logo__stroke {\n  stroke: url(#logoGradient);\n}\n.logo:hover .logo__stop-one {\n  stop-color: #EBFF00;\n}\n.logo:hover .logo__stop-two, .logo:hover .logo__stop-three {\n  stop-color: #FF70D9;\n}\n\n.basket__stop {\n  transition: 300ms ease-in;\n  stop-color: #FFFFFF;\n}\n.basket__path {\n  fill: url(#basketGradient);\n}\n.basket:hover .basket__stop-one {\n  stop-color: #EBFF00;\n}\n.basket:hover .basket__stop-two, .basket:hover .basket__stop-three {\n  stop-color: #FF70D9;\n}\n\n.card {\n  position: relative;\n  z-index: 1;\n  display: flex;\n  align-items: flex-end;\n  width: 100%;\n  min-height: 350px;\n  height: max-content;\n  border-radius: 10px;\n  overflow: hidden;\n}\n@media (min-width: 992.1px) {\n  .card {\n    padding: 35px 80px 35px 35px;\n  }\n}\n@media (max-width: 992px) and (min-width: 468.1px) {\n  .card {\n    padding: 25px 30px 25px 25px;\n  }\n}\n@media (max-width: 468px) {\n  .card {\n    padding: 25px;\n  }\n}\n.card__content {\n  display: grid;\n  gap: 22px;\n  width: 100%;\n  max-width: 635px;\n}\n.card__image {\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n@media (min-width: 992.1px) {\n  .card_large {\n    grid-column: span 2;\n  }\n}\n\n.cards {\n  display: grid;\n  grid-template-rows: auto;\n  gap: 40px;\n}\n@media (min-width: 992.1px) {\n  .cards {\n    gap: 40px;\n  }\n}\n@media (max-width: 992px) {\n  .cards {\n    gap: 30px;\n  }\n}\n@media (min-width: 680.1px) {\n  .cards {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n.navigation__list {\n  display: flex;\n  align-items: center;\n  gap: 28px;\n  list-style: none;\n}\n@media (max-width: 680px) {\n  .navigation__list {\n    position: fixed;\n    top: 80px;\n    right: 0;\n    z-index: 5;\n    flex-direction: column;\n    width: 0;\n    height: 100vh;\n    opacity: 0;\n    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);\n  }\n}\n.navigation__text {\n  color: #FFFFFF;\n}\n.navigation__item {\n  cursor: pointer;\n}\n@media (min-width: 680.1px) {\n  .navigation__button {\n    display: none;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__button {\n    position: relative;\n    z-index: 6;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background-color: #000000;\n    height: 30px;\n    width: 30px;\n    border-radius: 50%;\n    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);\n    text-align: center;\n    cursor: pointer;\n  }\n}\n@media (min-width: 680.1px) {\n  .navigation__background {\n    display: none;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__background {\n    position: absolute;\n    top: 15px;\n    right: 25px;\n    height: 20px;\n    width: 20px;\n    border-radius: 50%;\n    background-image: radial-gradient(#000000, #304571);\n    z-index: 4;\n    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);\n  }\n}\n@media (min-width: 680.1px) {\n  .navigation__icon {\n    display: none;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__icon {\n    position: relative;\n  }\n  .navigation__icon, .navigation__icon::before, .navigation__icon::after {\n    width: 25px;\n    height: 1px;\n    background-color: #FFFFFF;\n    display: inline-block;\n  }\n  .navigation__icon::before, .navigation__icon::after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    transition: all 0.2s;\n  }\n  .navigation__icon::before {\n    top: -7px;\n  }\n  .navigation__icon::after {\n    top: 7px;\n  }\n}\n.navigation__checkbox {\n  display: none;\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked ~ .navigation__background {\n    transform: scale(150);\n  }\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked ~ .navigation__list {\n    opacity: 1;\n    width: 100%;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked + .navigation__button .navigation__icon {\n    background-color: transparent;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {\n    top: 0;\n    transform: rotate(135deg);\n  }\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {\n    top: 0;\n    transform: rotate(-135deg);\n  }\n}\n\n.header {\n  position: fixed;\n  display: flex;\n  align-content: center;\n  justify-content: center;\n  width: 100%;\n  background: #000;\n  z-index: 2;\n}\n.header__content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  max-width: 1088px;\n}\n@media (min-width: 992.1px) {\n  .header__content {\n    padding-top: 25px;\n    padding-bottom: 20px;\n  }\n}\n@media (min-width: 680.1px) {\n  .header__content {\n    padding-top: 20px;\n    padding-bottom: 20px;\n  }\n}\n@media (max-width: 680px) {\n  .header__content {\n    padding-top: 10px;\n    padding-bottom: 10px;\n  }\n}\n\n.info-text {\n  background: #304571;\n}\n.info-text__container {\n  display: grid;\n  gap: 17px;\n}\n.info-text__text {\n  opacity: 0.6;\n}\n\n.offer {\n  display: grid;\n  align-items: center;\n  justify-content: center;\n  background: #304571;\n}\n.offer__container {\n  display: grid;\n  width: 100%;\n}\n@media (min-width: 992.1px) {\n  .offer__container {\n    gap: 40px;\n  }\n}\n@media (max-width: 992px) {\n  .offer__container {\n    gap: 30px;\n  }\n}\n\n.hero {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n.hero__content {\n  position: relative;\n  z-index: 1;\n  display: flex;\n  justify-content: space-between;\n  min-height: 555px;\n  padding-top: 170px;\n}\n@media (min-width: 992.1px) {\n  .hero__content {\n    align-items: center;\n    padding-bottom: 120px;\n  }\n}\n@media (max-width: 992px) {\n  .hero__content {\n    align-items: flex-end;\n  }\n}\n@media (min-width: 680.1px) {\n  .hero__content {\n    padding-bottom: 100px;\n  }\n}\n@media (max-width: 680px) {\n  .hero__content {\n    flex-direction: column-reverse;\n    align-items: center;\n    padding-top: 0;\n    padding-bottom: 40px;\n  }\n}\n.hero__container {\n  position: relative;\n  display: grid;\n  gap: 22px;\n}\n@media (max-width: 992px) and (min-width: 680.1px) {\n  .hero__container {\n    position: relative;\n    z-index: 2;\n    max-width: 440px;\n  }\n}\n@media (max-width: 680px) {\n  .hero__container {\n    justify-items: center;\n    text-align: center;\n  }\n}\n@media (max-width: 992px) and (min-width: 680.1px) {\n  .hero__image {\n    position: absolute;\n    right: -15%;\n    bottom: 0;\n  }\n}\n.hero__bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 0;\n  width: 100%;\n  height: 100%;\n}\n.hero__bg-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.footer {\n  background: #000000;\n}\n.footer__container {\n  display: grid;\n  justify-items: center;\n  padding: 5px 0 20px;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://softswiss-test/./src/scss/index.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.c-white {\n  color: #FFFFFF;\n}\n\n.c-yellow {\n  color: #EBFF00;\n}\n\n.c-pink {\n  color: #FF70D9;\n}\n\n* {\n  box-sizing: inherit;\n  padding: 0;\n  margin: 0;\n}\n\n*:focus {\n  outline: none;\n}\n\nhtml {\n  box-sizing: border-box;\n  color: #FFFFFF;\n  background: #304571;\n  width: 100%;\n  min-height: 100%;\n  margin: 0;\n  padding: 0;\n  font-size: 18px;\n  scroll-behavior: smooth;\n}\n\n.t-h1 {\n  font-weight: 900;\n  line-height: 1;\n}\n@media (min-width: 992.1px) {\n  .t-h1 {\n    font-size: 74px;\n  }\n}\n@media (max-width: 992px) {\n  .t-h1 {\n    font-size: 40px;\n  }\n}\n.t-h2 {\n  font-weight: 900;\n  line-height: 1;\n}\n@media (min-width: 992.1px) {\n  .t-h2 {\n    font-size: 72px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-h2 {\n    font-size: 48px;\n  }\n}\n@media (max-width: 680px) {\n  .t-h2 {\n    font-size: 36px;\n  }\n}\n.t-h3 {\n  font-weight: 800;\n  line-height: 1;\n}\n@media (min-width: 992.1px) {\n  .t-h3 {\n    font-size: 46px;\n  }\n}\n@media (max-width: 992px) {\n  .t-h3 {\n    font-size: 40px;\n  }\n}\n.t-h4 {\n  font-weight: 800;\n  line-height: 1.2;\n}\n@media (min-width: 992.1px) {\n  .t-h4 {\n    font-size: 32px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-h4 {\n    font-size: 24px;\n  }\n}\n@media (max-width: 680px) {\n  .t-h4 {\n    font-size: 18px;\n  }\n}\n.t-h5 {\n  font-weight: 800;\n  line-height: 1.2;\n}\n@media (min-width: 992.1px) {\n  .t-h5 {\n    font-size: 26px;\n  }\n}\n@media (max-width: 992px) {\n  .t-h5 {\n    font-size: 16px;\n  }\n}\n.t-h6 {\n  font-weight: 800;\n  line-height: 1.2;\n}\n@media (min-width: 992.1px) {\n  .t-h6 {\n    font-size: 24px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-h6 {\n    font-size: 16px;\n  }\n}\n@media (max-width: 680px) {\n  .t-h6 {\n    font-size: 14px;\n  }\n}\n.t-title {\n  font-size: 32px;\n  font-weight: 800;\n}\n@media (min-width: 992.1px) {\n  .t-title {\n    font-size: 32px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-title {\n    font-size: 24px;\n  }\n}\n@media (max-width: 680px) {\n  .t-title {\n    font-size: 18px;\n  }\n}\n.t-text {\n  font-weight: 700;\n  line-height: 24px;\n}\n@media (min-width: 992.1px) {\n  .t-text {\n    font-size: 20px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-text {\n    font-size: 16px;\n  }\n}\n@media (max-width: 680px) {\n  .t-text {\n    font-size: 14px;\n  }\n}\n.t-button {\n  font-size: 22px;\n  font-weight: 700;\n  line-height: 26px;\n}\n.t-small {\n  font-size: 18px;\n  font-weight: 800;\n  line-height: 28px;\n}\n.t-link {\n  font-weight: 800;\n}\n@media (min-width: 992.1px) {\n  .t-link {\n    font-size: 18px;\n    line-height: 28px;\n  }\n}\n@media (min-width: 680.1px) {\n  .t-link {\n    font-size: 16px;\n    line-height: 19px;\n  }\n}\n@media (max-width: 680px) {\n  .t-link {\n    font-size: 14px;\n    line-height: 17px;\n  }\n}\n\nbody {\n  font-family: \"Lato\", sans-serif;\n  font-weight: 800;\n  line-height: 1.2;\n}\n\n.h-one {\n  background-clip: text;\n  background-image: linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%);\n  color: transparent;\n  transition: 300ms ease-in;\n}\n.h-one:hover {\n  color: transparent !important;\n}\n\n.content {\n  width: 100vw;\n  margin: 0 auto;\n}\n@media (min-width: 992.1px) {\n  .content {\n    max-width: 1148px;\n  }\n}\n@media (min-width: 768.1px) {\n  .content {\n    padding: 30px 80px;\n  }\n}\n@media (min-width: 468.1px) {\n  .content {\n    padding: 25px 30px;\n  }\n}\n@media (max-width: 468px) {\n  .content {\n    padding: 25px 20px;\n  }\n}\n@media (min-width: 768.1px) {\n  .content_pt {\n    padding-top: 60px;\n  }\n}\n@media (max-width: 768px) {\n  .content_pt {\n    padding-top: 50px;\n  }\n}\n@media (min-width: 768.1px) {\n  .content_pb {\n    padding-bottom: 60px;\n  }\n}\n@media (max-width: 768px) {\n  .content_pb {\n    padding-bottom: 50px;\n  }\n}\n\n.button {\n  color: #000000;\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 10px;\n  width: max-content;\n  min-width: 190px;\n  height: 55px;\n  padding: 15px 40px;\n  border-radius: 100px;\n  background: #EBFF00;\n  transition: 300ms ease-in;\n}\n.button:hover {\n  background: rgba(235, 255, 0, 0.6);\n}\n.button_empty {\n  background: transparent;\n  color: #EBFF00;\n  border: 2px solid #EBFF00;\n}\n.button_empty:hover {\n  background: transparent;\n  color: rgba(235, 255, 0, 0.6);\n  border-color: rgba(235, 255, 0, 0.6);\n}\n@media (max-width: 992px) {\n  .button_empty {\n    font-size: 16px;\n    line-height: 19px;\n    min-width: 160px;\n    height: 35px;\n    padding: 0 15px;\n  }\n}\n\n.link {\n  text-decoration: none;\n  transition: 300ms ease-in;\n  color: #EBFF00;\n}\n.link:hover {\n  color: rgba(235, 255, 0, 0.6);\n}\n\n.logo {\n  height: auto;\n}\n@media (min-width: 992.1px) {\n  .logo {\n    width: 104px;\n  }\n}\n@media (max-width: 992px) {\n  .logo {\n    width: 71px;\n  }\n}\n.logo__stop {\n  transition: 300ms ease-in;\n  stop-color: #FF70D9;\n}\n.logo__fill {\n  fill: url(#logoGradient);\n}\n.logo__stroke {\n  stroke: url(#logoGradient);\n}\n.logo:hover .logo__stop-one {\n  stop-color: #EBFF00;\n}\n.logo:hover .logo__stop-two, .logo:hover .logo__stop-three {\n  stop-color: #FF70D9;\n}\n\n.basket__stop {\n  transition: 300ms ease-in;\n  stop-color: #FFFFFF;\n}\n.basket__path {\n  fill: url(#basketGradient);\n}\n.basket:hover .basket__stop-one {\n  stop-color: #EBFF00;\n}\n.basket:hover .basket__stop-two, .basket:hover .basket__stop-three {\n  stop-color: #FF70D9;\n}\n\n.card {\n  position: relative;\n  z-index: 1;\n  display: flex;\n  align-items: flex-end;\n  width: 100%;\n  min-height: 350px;\n  height: max-content;\n  border-radius: 10px;\n  overflow: hidden;\n}\n@media (min-width: 992.1px) {\n  .card {\n    padding: 35px 80px 35px 35px;\n  }\n}\n@media (max-width: 992px) and (min-width: 468.1px) {\n  .card {\n    padding: 25px 30px 25px 25px;\n  }\n}\n@media (max-width: 468px) {\n  .card {\n    padding: 25px;\n  }\n}\n.card__content {\n  display: grid;\n  gap: 22px;\n  width: 100%;\n  max-width: 635px;\n}\n.card__image {\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n@media (min-width: 992.1px) {\n  .card_large {\n    grid-column: span 2;\n  }\n}\n\n.cards {\n  display: grid;\n  grid-template-rows: auto;\n  gap: 40px;\n}\n@media (min-width: 992.1px) {\n  .cards {\n    gap: 40px;\n  }\n}\n@media (max-width: 992px) {\n  .cards {\n    gap: 30px;\n  }\n}\n@media (min-width: 680.1px) {\n  .cards {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n.navigation__list {\n  display: flex;\n  align-items: center;\n  gap: 28px;\n  list-style: none;\n}\n@media (max-width: 680px) {\n  .navigation__list {\n    position: fixed;\n    top: 80px;\n    right: 0;\n    z-index: 5;\n    flex-direction: column;\n    width: 0;\n    height: 100vh;\n    opacity: 0;\n    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);\n  }\n}\n.navigation__text {\n  color: #FFFFFF;\n}\n.navigation__item {\n  cursor: pointer;\n}\n@media (min-width: 680.1px) {\n  .navigation__button {\n    display: none;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__button {\n    position: relative;\n    z-index: 6;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background-color: #000000;\n    height: 30px;\n    width: 30px;\n    border-radius: 50%;\n    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);\n    text-align: center;\n    cursor: pointer;\n  }\n}\n@media (min-width: 680.1px) {\n  .navigation__background {\n    display: none;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__background {\n    position: absolute;\n    top: 15px;\n    right: 25px;\n    height: 20px;\n    width: 20px;\n    border-radius: 50%;\n    background-image: radial-gradient(#000000, #304571);\n    z-index: 4;\n    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);\n  }\n}\n@media (min-width: 680.1px) {\n  .navigation__icon {\n    display: none;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__icon {\n    position: relative;\n  }\n  .navigation__icon, .navigation__icon::before, .navigation__icon::after {\n    width: 25px;\n    height: 1px;\n    background-color: #FFFFFF;\n    display: inline-block;\n  }\n  .navigation__icon::before, .navigation__icon::after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    transition: all 0.2s;\n  }\n  .navigation__icon::before {\n    top: -7px;\n  }\n  .navigation__icon::after {\n    top: 7px;\n  }\n}\n.navigation__checkbox {\n  display: none;\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked ~ .navigation__background {\n    transform: scale(150);\n  }\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked ~ .navigation__list {\n    opacity: 1;\n    width: 100%;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked + .navigation__button .navigation__icon {\n    background-color: transparent;\n  }\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {\n    top: 0;\n    transform: rotate(135deg);\n  }\n}\n@media (max-width: 680px) {\n  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {\n    top: 0;\n    transform: rotate(-135deg);\n  }\n}\n\n.header {\n  position: fixed;\n  display: flex;\n  align-content: center;\n  justify-content: center;\n  width: 100%;\n  background: #000;\n  z-index: 2;\n}\n.header__content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  max-width: 1088px;\n}\n@media (min-width: 992.1px) {\n  .header__content {\n    padding-top: 25px;\n    padding-bottom: 20px;\n  }\n}\n@media (min-width: 680.1px) {\n  .header__content {\n    padding-top: 20px;\n    padding-bottom: 20px;\n  }\n}\n@media (max-width: 680px) {\n  .header__content {\n    padding-top: 10px;\n    padding-bottom: 10px;\n  }\n}\n\n.info-text {\n  background: #304571;\n}\n.info-text__container {\n  display: grid;\n  gap: 17px;\n}\n.info-text__text {\n  opacity: 0.6;\n}\n\n.offer {\n  display: grid;\n  align-items: center;\n  justify-content: center;\n  background: #304571;\n}\n.offer__container {\n  display: grid;\n  width: 100%;\n}\n@media (min-width: 992.1px) {\n  .offer__container {\n    gap: 40px;\n  }\n}\n@media (max-width: 992px) {\n  .offer__container {\n    gap: 30px;\n  }\n}\n\n.hero {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n.hero__content {\n  position: relative;\n  z-index: 1;\n  display: flex;\n  justify-content: space-between;\n  min-height: 555px;\n  padding-top: 170px;\n}\n@media (min-width: 992.1px) {\n  .hero__content {\n    align-items: center;\n    padding-bottom: 120px;\n  }\n}\n@media (max-width: 992px) {\n  .hero__content {\n    align-items: flex-end;\n  }\n}\n@media (min-width: 680.1px) {\n  .hero__content {\n    padding-bottom: 100px;\n  }\n}\n@media (max-width: 680px) {\n  .hero__content {\n    flex-direction: column-reverse;\n    align-items: center;\n    padding-top: 0;\n    padding-bottom: 40px;\n  }\n}\n.hero__container {\n  position: relative;\n  display: grid;\n  gap: 22px;\n}\n@media (max-width: 992px) and (min-width: 680.1px) {\n  .hero__container {\n    position: relative;\n    z-index: 2;\n    max-width: 440px;\n  }\n}\n@media (max-width: 680px) {\n  .hero__container {\n    justify-items: center;\n    text-align: center;\n  }\n}\n@media (max-width: 992px) and (min-width: 680.1px) {\n  .hero__image {\n    position: absolute;\n    right: -15%;\n    bottom: 0;\n  }\n}\n.hero-bg__picture {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 0;\n  width: 100%;\n  height: 100%;\n}\n.hero-bg__image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.footer {\n  background: #000000;\n}\n.footer__container {\n  display: grid;\n  justify-items: center;\n  padding: 5px 0 20px;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://softswiss-test/./src/scss/index.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -400,6 +420,26 @@ eval("module.exports = __webpack_require__.p + \"5000161d3a5b5a6c066d.png\";\n\n
 
 /***/ }),
 
+/***/ "./src/images/bg1-360.webp":
+/*!*********************************!*\
+  !*** ./src/images/bg1-360.webp ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"522b37b6aee27d75d7ac.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg1-360.webp?");
+
+/***/ }),
+
+/***/ "./src/images/bg1-768.webp":
+/*!*********************************!*\
+  !*** ./src/images/bg1-768.webp ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"e9485360b0ff9a7d8879.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg1-768.webp?");
+
+/***/ }),
+
 /***/ "./src/images/bg1.jpg":
 /*!****************************!*\
   !*** ./src/images/bg1.jpg ***!
@@ -407,6 +447,46 @@ eval("module.exports = __webpack_require__.p + \"5000161d3a5b5a6c066d.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"680ad61e4be0df2600d4.jpg\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg1.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/bg1.webp":
+/*!*****************************!*\
+  !*** ./src/images/bg1.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"325fee4dfd6acf87afdc.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg1.webp?");
+
+/***/ }),
+
+/***/ "./src/images/bg1_360.jpg":
+/*!********************************!*\
+  !*** ./src/images/bg1_360.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"507a70a2ed00cf5b4130.jpg\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg1_360.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/bg1_768.jpg":
+/*!********************************!*\
+  !*** ./src/images/bg1_768.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"0f14b4d62d8ec8fdfd80.jpg\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg1_768.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/bg2-768.webp":
+/*!*********************************!*\
+  !*** ./src/images/bg2-768.webp ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"4448f613b3235051ff7a.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg2-768.webp?");
 
 /***/ }),
 
@@ -420,6 +500,36 @@ eval("module.exports = __webpack_require__.p + \"de3ce17d109a6d446172.jpg\";\n\n
 
 /***/ }),
 
+/***/ "./src/images/bg2.webp":
+/*!*****************************!*\
+  !*** ./src/images/bg2.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"ff36a7338e5c2df265b3.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg2.webp?");
+
+/***/ }),
+
+/***/ "./src/images/bg2_768.jpg":
+/*!********************************!*\
+  !*** ./src/images/bg2_768.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"8e041fc75efd96b3c746.jpg\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg2_768.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/bg3-768.webp":
+/*!*********************************!*\
+  !*** ./src/images/bg3-768.webp ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"cd8a74d646e786b02221.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg3-768.webp?");
+
+/***/ }),
+
 /***/ "./src/images/bg3.jpg":
 /*!****************************!*\
   !*** ./src/images/bg3.jpg ***!
@@ -427,6 +537,36 @@ eval("module.exports = __webpack_require__.p + \"de3ce17d109a6d446172.jpg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"2dccf30af6628caa5f99.jpg\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg3.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/bg3.webp":
+/*!*****************************!*\
+  !*** ./src/images/bg3.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"4e6d48ffeedaefc7f00f.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg3.webp?");
+
+/***/ }),
+
+/***/ "./src/images/bg3_768.jpg":
+/*!********************************!*\
+  !*** ./src/images/bg3_768.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"0b554865569fa97d804c.jpg\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg3_768.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/bg4-765.webp":
+/*!*********************************!*\
+  !*** ./src/images/bg4-765.webp ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"5799bfcfddee35c57c6b.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg4-765.webp?");
 
 /***/ }),
 
@@ -440,6 +580,36 @@ eval("module.exports = __webpack_require__.p + \"0aaf2631412402d4109f.jpg\";\n\n
 
 /***/ }),
 
+/***/ "./src/images/bg4.webp":
+/*!*****************************!*\
+  !*** ./src/images/bg4.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"4dfb269fb3d54fb38e5d.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg4.webp?");
+
+/***/ }),
+
+/***/ "./src/images/bg4_765.jpg":
+/*!********************************!*\
+  !*** ./src/images/bg4_765.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1409037de4732c843031.jpg\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg4_765.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/bg5-768.webp":
+/*!*********************************!*\
+  !*** ./src/images/bg5-768.webp ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"37a192a65f546a542c95.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg5-768.webp?");
+
+/***/ }),
+
 /***/ "./src/images/bg5.jpg":
 /*!****************************!*\
   !*** ./src/images/bg5.jpg ***!
@@ -450,6 +620,36 @@ eval("module.exports = __webpack_require__.p + \"fa2b2d0578dc809fabe3.jpg\";\n\n
 
 /***/ }),
 
+/***/ "./src/images/bg5.webp":
+/*!*****************************!*\
+  !*** ./src/images/bg5.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1a9699d02b903fa318a1.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg5.webp?");
+
+/***/ }),
+
+/***/ "./src/images/bg5_768.jpg":
+/*!********************************!*\
+  !*** ./src/images/bg5_768.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b1f2f923b1c716414c5b.jpg\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/bg5_768.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/earth.webp":
+/*!*******************************!*\
+  !*** ./src/images/earth.webp ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"be60f749a5b280a11ec0.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/earth.webp?");
+
+/***/ }),
+
 /***/ "./src/images/rocket.png":
 /*!*******************************!*\
   !*** ./src/images/rocket.png ***!
@@ -457,6 +657,16 @@ eval("module.exports = __webpack_require__.p + \"fa2b2d0578dc809fabe3.jpg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"a51a7a9a6263cab7cc02.png\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/rocket.png?");
+
+/***/ }),
+
+/***/ "./src/images/rocket.webp":
+/*!********************************!*\
+  !*** ./src/images/rocket.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"e376659abdf47c759f69.webp\";\n\n//# sourceURL=webpack://softswiss-test/./src/images/rocket.webp?");
 
 /***/ })
 
@@ -539,6 +749,18 @@ eval("module.exports = __webpack_require__.p + \"a51a7a9a6263cab7cc02.png\";\n\n
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -612,7 +834,25 @@ eval("module.exports = __webpack_require__.p + \"a51a7a9a6263cab7cc02.png\";\n\n
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/layout-of-the-test-site/";
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
