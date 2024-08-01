@@ -1,0 +1,18 @@
+.offer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: $c-blue;
+
+  &__container {
+    display: grid;
+    width: 100%;
+
+    @include _992M {
+      gap: 40px;
+    }
+    @include _992 {
+      gap: 30px;
+    }
+  }
+}

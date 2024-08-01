@@ -1,0 +1,12 @@
+.info-text {
+  background: $c-blue;
+
+  &__container {
+    display: grid;
+    gap: 17px;
+  }
+
+  &__text {
+    opacity: .6;
+  }
+}

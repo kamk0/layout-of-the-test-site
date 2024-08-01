@@ -1,0 +1,35 @@
+.logo {
+  $logo: &;
+
+  height: auto;
+
+  @include  _992M {
+    width: 104px;
+  }
+  @include  _992 {
+    width: 71px;
+  }
+
+  &__stop {
+    transition: $transition;
+    stop-color: $c-pink
+  }
+
+  &__fill {
+    fill: url(#logoGradient);
+  }
+
+  &__stroke {
+    stroke: url(#logoGradient);
+  }
+
+  &:hover {
+    #{$logo}__stop-one {
+      stop-color: $c-yellow;
+    }
+
+    #{$logo}__stop-two,  #{$logo}__stop-three {
+      stop-color: $c-pink;
+    }
+  }
+}

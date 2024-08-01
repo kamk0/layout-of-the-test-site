@@ -1,0 +1,113 @@
+// Mobile-first mixins
+@mixin _320M() {
+  @media (min-width: 320.1px) {
+    @content;
+  }
+}
+
+@mixin _375M() {
+  @media (min-width: 375.1px) {
+    @content;
+  }
+}
+
+@mixin _468M() {
+  @media (min-width: 468.1px) {
+    @content;
+  }
+}
+
+@mixin _768M() {
+  @media (min-width: 768.1px) {
+    @content;
+  }
+}
+@mixin _680M() {
+  @media (min-width: 680.1px) {
+    @content;
+  }
+}
+
+@mixin _992M() {
+  @media (min-width: 992.1px) {
+    @content;
+  }
+}
+
+@mixin _1280M() {
+  @media (min-width: 1280.1px) {
+    @content;
+  }
+}
+
+@mixin _1440M() {
+  @media (min-width: 1440.1px) {
+    @content;
+  }
+}
+
+@mixin _1680M() {
+  @media (min-width: 1680.1px) {
+    @content;
+  }
+}
+
+@mixin _1920M() {
+  @media (min-width: 1920.1px) {
+    @content;
+  }
+}
+// Desktop-first mixins
+@mixin _1920() {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin _1680() {
+  @media (max-width: 1680px) {
+    @content;
+  }
+}
+
+@mixin _1440() {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin _1280() {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin _992() {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin _768() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin _680() {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin _468() {
+  @media (max-width: 468px) {
+    @content;
+  }
+}
+
+@mixin _375() {
+  @media (max-width: 375px) {
+    @content;
+  }
+}

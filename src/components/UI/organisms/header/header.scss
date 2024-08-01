@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  background: #000;
+  z-index: 2;
+
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1088px;
+    @include _992M {
+      padding-top: 25px;
+      padding-bottom: 20px;
+    }
+    @include _680M {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    @include _680 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}

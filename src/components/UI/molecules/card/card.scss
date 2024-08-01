@@ -1,0 +1,47 @@
+.card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 350px;
+  height: max-content;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include _992M {
+    padding: 35px 80px 35px 35px;
+  }
+  @include _992 {
+    @include _468M {
+      padding: 25px 30px 25px 25px;
+    }
+  }
+
+  @include _468 {
+    padding: 25px;
+  }
+
+  &__content {
+    display: grid;
+    gap: 22px;
+    width: 100%;
+    max-width: 635px;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &_large {
+    @include _992M {
+      grid-column: span 2;
+    }
+  }
+}

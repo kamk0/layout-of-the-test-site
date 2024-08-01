@@ -1,0 +1,38 @@
+.content {
+  width: 100vw;
+  margin: 0 auto;
+
+  @include _992M {
+    max-width: calc(1088px + 60px);
+  }
+
+  @include _768M {
+    padding: 30px 80px;
+  }
+
+  @include _468M {
+    padding: 25px 30px;
+  }
+
+  @include _468 {
+    padding: 25px 20px;
+  }
+
+  &_pt {
+    @include _768M {
+      padding-top: 60px;
+    }
+    @include _768 {
+      padding-top: 50px;
+    }
+  }
+
+  &_pb {
+    @include _768M {
+      padding-bottom: 60px;
+    }
+    @include _768 {
+      padding-bottom: 50px;
+    }
+  }
+}

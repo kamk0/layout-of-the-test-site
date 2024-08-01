@@ -1,0 +1,154 @@
+.t {
+  &-h1 {
+    font-weight: 900;
+    line-height: 1;
+
+    @include _992M {
+      font-size: 74px;
+    }
+
+    @include _992 {
+      font-size: 40px;
+    }
+  }
+
+  &-h2 {
+    font-weight: 900;
+    line-height: 1;
+
+    @include _992M {
+      font-size: 72px;
+    }
+
+    @include _680M {
+      font-size: 48px;
+    }
+
+    @include _680 {
+      font-size: 36px;
+    }
+  }
+
+  &-h3 {
+    font-weight: 800;
+    line-height: 1;
+
+    @include _992M {
+      font-size: 46px;
+    }
+    @include _992 {
+      font-size: 40px;
+    }
+  }
+
+  &-h4 {
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include _992M {
+      font-size: 32px;
+    }
+
+    @include _680M {
+      font-size: 24px;
+    }
+
+    @include _680 {
+      font-size: 18px;
+    }
+  }
+
+  &-h5 {
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include _992M {
+      font-size: 26px;
+    }
+    @include _992 {
+      font-size: 16px;
+    }
+  }
+  &-h6 {
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include _992M {
+      font-size: 24px;
+    }
+
+    @include _680M {
+      font-size: 16px;
+    }
+
+    @include _680 {
+      font-size: 14px;
+    }
+  }
+
+  &-title {
+    font-size: 32px;
+    font-weight: 800;
+
+    @include _992M {
+      font-size: 32px;
+    }
+
+    @include _680M {
+      font-size: 24px;
+    }
+
+    @include _680 {
+      font-size: 18px;
+    }
+  }
+
+  &-text {
+    font-weight: 700;
+    line-height: 24px;
+
+    @include _992M {
+      font-size: 20px;
+    }
+
+    @include _680M {
+      font-size: 16px;
+    }
+
+    @include _680 {
+      font-size: 14px;
+    }
+  }
+
+  &-button {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+
+  &-small {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 28px;
+  }
+
+  &-link {
+    font-weight: 800;
+
+    @include _992M {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @include _680M {
+      font-size: 16px;
+      line-height: 19px;
+
+    }
+
+    @include _680 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
