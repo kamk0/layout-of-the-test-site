@@ -40,6 +40,11 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.(ico)$/,
+        exclude: /node_modules/,
+        use: ['file-loader?name=[name].[ext]'] // ?name=[name].[ext] is only necessary to preserve the original file name
+      }
 
     ],
   },
@@ -52,6 +57,9 @@ module.exports = {
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'public'),
+      staticOptions: {
+        index: false
+      }
     },
     compress: true,
     port: 3000,
