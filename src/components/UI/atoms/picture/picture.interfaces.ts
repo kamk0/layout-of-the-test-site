@@ -14,4 +14,3 @@ export interface PictureData {
 export interface PictureProps extends PictureData {
   className?: string;
 }
-

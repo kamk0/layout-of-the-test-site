@@ -1,40 +1,38 @@
 .t {
+  &-h1, &-h2, &-h3, &-h4, &-h5, &-h6, &-title, &-text, &-link {
+    font-weight: $font-weight-800;
+  }
+
   &-h1 {
-    font-weight: 900;
-    line-height: 1;
+    font-weight: $font-weight-900;
+    line-height: $line-height-1;
 
     @include _992M {
       font-size: 74px;
     }
-
     @include _992 {
       font-size: 40px;
     }
   }
 
   &-h2 {
-    font-weight: 800;
-    line-height: 1;
+    line-height: $line-height-1;
     font-style: normal;
 
     @include _680M {
       font-size: 48px;
       letter-spacing: -.2px;
     }
-
-
     @include _992M {
       font-size: 72px;
     }
-
     @include _680 {
       font-size: 36px;
     }
   }
 
   &-h3 {
-    font-weight: 800;
-    line-height: 1;
+    line-height: $line-height-1;
 
     @include _992M {
       font-size: 46px;
@@ -45,25 +43,22 @@
   }
 
   &-h4 {
-    font-weight: 800;
-    line-height: 1.2;
+    line-height: $line-height-1-2;
     letter-spacing: -.1px;
+
     @include _680M {
       font-size: 24px;
     }
-
     @include _992M {
       font-size: 32px;
     }
-
     @include _680 {
       font-size: 18px;
     }
   }
 
   &-h5 {
-    font-weight: 800;
-    line-height: 1.2;
+    line-height: $line-height-1-2;
 
     @include _992M {
       font-size: 26px;
@@ -72,86 +67,74 @@
       font-size: 16px;
     }
   }
-  &-h6 {
-    font-weight: 800;
-    line-height: 1.2;
 
+  &-h6 {
+    line-height: $line-height-1-2;
 
     @include _680M {
       font-size: 16px;
     }
-
     @include _992M {
       font-size: 24px;
     }
-
     @include _680 {
       font-size: 14px;
     }
   }
 
-  &-title {
+  &-header {
     font-size: 32px;
-    font-weight: 800;
 
     @include _680M {
       font-size: 24px;
     }
-
     @include _992M {
       font-size: 32px;
     }
-
     @include _680 {
       font-size: 18px;
     }
   }
 
-  &-text {
-    font-weight: 700;
-
+  &-paragraph {
+    font-weight: $font-weight-700;
 
     @include _680M {
       font-size: 16px;
       line-height: 19px;
     }
-
     @include _992M {
       font-size: 20px;
       line-height: 24px;
     }
-
     @include _680 {
       font-size: 14px;
     }
   }
 
-  &-button {
+  &-medium {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: $font-weight-700;
     line-height: 26px;
   }
 
   &-small {
     font-size: 18px;
-    font-weight: 800;
+    font-weight: $font-weight-800;
     line-height: 28px;
   }
 
-  &-link {
-    font-weight: 800;
+  &-extra-small {
     letter-spacing: -.1px;
 
     @include _680M {
       font-size: 16px;
       line-height: 19px;
     }
-
     @include _992M {
       font-size: 18px;
       line-height: 28px;
     }
-
     @include _680 {
       font-size: 14px;
       line-height: 17px;

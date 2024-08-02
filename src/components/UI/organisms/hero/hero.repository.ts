@@ -1,4 +1,3 @@
-import {CardType} from "../../molecules/cards/cards";
 import heroBg from '@images/bg1.jpg';
 import bg1Web from '@images/bg1.webp';
 import bg1360Web from '@images/bg1-360.webp';
@@ -7,7 +6,7 @@ import bg1360 from '@images/bg1_360.jpg';
 import bg1768 from '@images/bg1_768.jpg';
 import earth from '@images/EARTH.png';
 import earthWebp from '@images/earth.webp';
-import {PictureData, PictureSource} from "../../atoms/picture/picture.interfaces";
+import { PictureData, PictureSource } from '../../atoms/picture/picture.interfaces';
 
 export class HeroRepository {
   static getSource(): PictureSource[] {
@@ -31,7 +30,7 @@ export class HeroRepository {
       {
         dataSrcset: bg1Web,
       },
-    ]
+    ];
   }
 
   static getImage(): PictureData {
@@ -40,23 +39,23 @@ export class HeroRepository {
       width: 1905,
       height: 469,
       alt: 'hero',
-    }
+    };
   }
 
   static getBgParams(): PictureData {
     return {
       sources: HeroRepository.getSource(),
       ...HeroRepository.getImage(),
-    }
+    };
   }
 
   static getHeroImage(): PictureData {
     return {
-      sources:[ {dataSrcset: earthWebp}],
+      sources: [{ dataSrcset: earthWebp }],
       dataSrc: earth,
       width: 327,
       height: 367,
       alt: 'earth',
-    }
+    };
   }
 }

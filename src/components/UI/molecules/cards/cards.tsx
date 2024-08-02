@@ -1,48 +1,36 @@
-import React, {FC} from "react";
-import {Card} from "../card/card";
-import {PictureData} from "../../atoms/picture/picture.interfaces";
+import React, { FC } from 'react';
+import { Card } from '../card/card';
+import { PictureData } from '../../atoms/picture/picture.interfaces';
 
 export type CardType = {
-  id: number,
-  title: string,
-  subtitle: string,
-  link: string,
-  textLink: string,
-  pictureData: PictureData,
-}
+  id: number;
+  title: string;
+  subtitle: string;
+  link: string;
+  textLink: string;
+  pictureData: PictureData;
+};
 
 type CardsProps = {
-  cards: CardType[]
-}
+  cards: CardType[];
+};
 
-export const Cards: FC<CardsProps> = ({cards}: CardsProps) => {
-  const cardItems = cards.map((
-    {
-      title,
-      subtitle,
-      link,
-      textLink,
-      id,
-      pictureData
-    },
-    index,
-  ) => {
+export const Cards: FC<CardsProps> = ({ cards }: CardsProps) => {
+  const cardItems = cards.map(({ title, subtitle, link, textLink, id, pictureData }, index) => {
     const isBigCard = index === 0 || index === 3;
 
-    return <Card
-      key={id}
-      title={title}
-      subtitle={subtitle}
-      link={link}
-      textLink={textLink}
-      isBigCard={isBigCard}
-      pictureData={pictureData}
-    />
-  })
+    return (
+      <Card
+        key={id}
+        title={title}
+        subtitle={subtitle}
+        link={link}
+        textLink={textLink}
+        isBigCard={isBigCard}
+        pictureData={pictureData}
+      />
+    );
+  });
 
-  return (
-    <div className="cards">
-      {cardItems}
-    </div>
-  )
-}
+  return <div className="cards">{cardItems}</div>;
+};

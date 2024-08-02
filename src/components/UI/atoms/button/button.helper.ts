@@ -5,4 +5,4 @@ export enum ButtonTheme {
 
 export const buttonThemeClasses = {
   [ButtonTheme.EMPTY]: 'button_empty',
-}
+};

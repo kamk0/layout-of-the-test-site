@@ -1,5 +1,5 @@
-import React, {FC} from "react";
-import LinearGradient from "../linearGradient/linearGradient";
+import React, { FC } from 'react';
+import LinearGradient from '../linearGradient/linearGradient';
 
 const Basket: FC = () => {
   return (
@@ -11,7 +11,7 @@ const Basket: FC = () => {
       className="basket"
     >
       <defs>
-        <LinearGradient className="basket"/>
+        <LinearGradient className="basket" />
       </defs>
       <path
         fillRule="evenodd"
@@ -20,7 +20,7 @@ const Basket: FC = () => {
         className="basket__path"
       />
     </svg>
-  )
-}
+  );
+};
 
 export default Basket;

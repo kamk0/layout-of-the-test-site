@@ -1,6 +1,6 @@
-import React, {FC} from "react";
-import Link from "../../atoms/link/link";
-import Basket from "../../atoms/icons/basket/basket";
+import React, { FC } from 'react';
+import Link from '../../atoms/link/link';
+import Basket from '../../atoms/icons/basket/basket';
 
 const Navigation: FC = () => {
   return (
@@ -21,19 +21,32 @@ const Navigation: FC = () => {
 
       <ul className="navigation__list">
         <li className="navigation__item">
-          <Link href={'#'} className="navigation__text h-one">Home</Link>
+          <Link
+            href={'#'}
+            className="navigation__text"
+          >
+            Home
+          </Link>
         </li>
         <li className="navigation__item">
-          <Link href={'#'} className="navigation__text h-one">Products</Link>
+          <Link
+            href={'#'}
+            className="navigation__text"
+          >
+            Products
+          </Link>
         </li>
         <li className="navigation__item">
-          <Link href={'#'} className="navigation__text">
-            <Basket/>
+          <Link
+            href={'#'}
+            className="navigation__text"
+          >
+            <Basket />
           </Link>
         </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
