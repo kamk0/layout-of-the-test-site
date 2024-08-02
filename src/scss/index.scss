@@ -8,12 +8,12 @@
 @import "global/hover-animation";
 
 
-@import "container";
+@import "global/container";
 
 @import "../components/UI/atoms/button/button";
 @import "../components/UI/atoms/link/link";
-@import "../components/UI/atoms/logo/logo";
-@import "../components/UI/atoms/basket/basket";
+@import "../components/UI/atoms/icons/logo/logo";
+@import "../components/UI/atoms/icons/basket/basket";
 @import "../components/UI/atoms/picture/picture";
 
 @import "../components/UI/molecules/card/card";

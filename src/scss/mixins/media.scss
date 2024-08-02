@@ -57,6 +57,7 @@
     @content;
   }
 }
+
 // Desktop-first mixins
 @mixin _1920() {
   @media (max-width: 1920px) {

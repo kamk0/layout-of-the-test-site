@@ -1,7 +1,6 @@
 import React, {FC} from "react";
-import basket from '@images/basket.svg';
 import Link from "../../atoms/link/link";
-import Basket from "../../atoms/basket/basket";
+import Basket from "../../atoms/icons/basket/basket";
 
 const Navigation: FC = () => {
   return (
@@ -15,20 +14,22 @@ const Navigation: FC = () => {
         htmlFor="navi-toggle"
         className="navigation__button"
       >
-        <span className="navigation__icon">&nbsp;</span>
+        <span className="navigation__icon"></span>
       </label>
 
-      <div className="navigation__background">&nbsp;</div>
+      <div className="navigation__background"></div>
 
       <ul className="navigation__list">
         <li className="navigation__item">
-          <Link href={'#'} className={'navigation__text h-one'}>Home</Link>
+          <Link href={'#'} className="navigation__text h-one">Home</Link>
         </li>
         <li className="navigation__item">
-          <Link href={'#'} className={'navigation__text h-one'}>Products</Link>
+          <Link href={'#'} className="navigation__text h-one">Products</Link>
         </li>
         <li className="navigation__item">
-          <Basket/>
+          <Link href={'#'} className="navigation__text">
+            <Basket/>
+          </Link>
         </li>
       </ul>
     </nav>

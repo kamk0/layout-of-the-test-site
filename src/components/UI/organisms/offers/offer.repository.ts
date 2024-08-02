@@ -55,7 +55,6 @@ export class OfferRepository {
         id: 1,
         title: "Move the borders of reality!",
         subtitle: "Go on a space adventure - it's possible with us!",
-        image: bg3,
         link: '#',
         textLink: "Learn more",
         pictureData: OfferRepository.getBgParams(
@@ -71,7 +70,6 @@ export class OfferRepository {
         id: 2,
         title: "Space is not just stars and planets",
         subtitle: "Go on a space adventure",
-        image: bg5,
         link: "#",
         textLink: "Learn more",
         pictureData: OfferRepository.getBgParams(
@@ -87,7 +85,6 @@ export class OfferRepository {
         id: 3,
         title: "For those who dream of stars",
         subtitle: "Our offer: make your dream come true",
-        image: bg2,
         link: "#",
         textLink: "Learn more",
         pictureData: OfferRepository.getBgParams(
@@ -103,7 +100,6 @@ export class OfferRepository {
         id: 4,
         title: "Fulfill your fantastic dreams",
         subtitle: "Space has never been so close",
-        image: bg4,
         link: "#",
         textLink: "Learn more",
         pictureData: OfferRepository.getBgParams(

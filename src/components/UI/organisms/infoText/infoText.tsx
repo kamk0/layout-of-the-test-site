@@ -10,12 +10,12 @@ export const InfoText: FC = () => {
   } = InfoTextRepository.getInfo()
 
   return (
-    <section className={`info-text`}>
-      <div className={`content content_pb`}>
+    <section className="info-text">
+      <div className="content content_pb">
         <div className="info-text__container">
-          <h2 className={'t-h4'}>{title}</h2>
-          <p className={`t-text info-text__text`}>{subTitle}</p>
-          <Link href={link.href} className={'t-text c-yellow'}>{link.text}</Link>
+          <h2 className="t-h4">{title}</h2>
+          <p className="t-text info-text__text">{subTitle}</p>
+          <Link href={link.href} className="t-text c-yellow">{link.text}</Link>
         </div>
       </div>
     </section>

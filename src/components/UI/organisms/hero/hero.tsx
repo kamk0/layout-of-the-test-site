@@ -1,7 +1,4 @@
 import React, {FC} from "react";
-import heroBg from '@images/bg1.jpg';
-
-import earth from '@images/EARTH.png';
 import Button from "../../atoms/button/button";
 import {HeroRepository} from "./hero.repository";
 import Picture from "../../atoms/picture/picture";
@@ -18,7 +15,7 @@ const Hero: FC = () => {
           <p className="hero__subtitle t-h4">
             Where the possibilities are <span className="c-yellow">endless!</span>
           </p>
-          <Button href={`#`} className={'c-yellow'}>Learn more</Button>
+          <Button href={`#`} className="c-yellow">Learn more</Button>
         </div>
         <div className="hero__image">
           <Picture

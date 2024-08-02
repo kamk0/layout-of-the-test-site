@@ -1,21 +1,18 @@
 .navigation {
-  @include _680M {
-    padding-right: 25px;
-  }
-  @include _992M {
-    padding-right: 15px;
-  }
+  //@include _680M {
+  //  padding-right: 25px;
+  //}
+
 
   &__list {
     display: flex;
     align-items: center;
-    list-style: none;
 
     @include _680M {
-      gap: 42px;
+      gap: 7px;
     }
     @include _992M {
-      gap: 40px;
+      gap: 37px;
       padding-top: 10px;
     }
 
@@ -46,7 +43,14 @@
 
   &__text {
     color: $c-white;
-    padding: 10px;
+    background-clip: text;
+    background-image: linear-gradient(98.25deg, $c-yellow 18.56%, $c-pink 76.02%);
+    padding: 10px 25px;
+    transition: $transition;
+
+    &:hover {
+      color: transparent !important;
+    }
 
     @include _992M {
       padding: 10px;

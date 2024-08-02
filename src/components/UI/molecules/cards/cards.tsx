@@ -6,7 +6,6 @@ export type CardType = {
   id: number,
   title: string,
   subtitle: string,
-  image: string,
   link: string,
   textLink: string,
   pictureData: PictureData,
@@ -23,7 +22,6 @@ export const Cards: FC<CardsProps> = ({cards}: CardsProps) => {
       subtitle,
       link,
       textLink,
-      image,
       id,
       pictureData
     },
@@ -35,7 +33,6 @@ export const Cards: FC<CardsProps> = ({cards}: CardsProps) => {
       key={id}
       title={title}
       subtitle={subtitle}
-      image={image}
       link={link}
       textLink={textLink}
       isBigCard={isBigCard}

@@ -7,20 +7,19 @@ import {PictureData} from "../../atoms/picture/picture.interfaces";
 type CardProps = {
   title: string,
   subtitle: string,
-  image: string,
   link: string,
   textLink: string,
   isBigCard: boolean,
   pictureData: PictureData,
 }
 
-export const Card: FC<CardProps> = ({title, subtitle, image, link, textLink, isBigCard, pictureData}: CardProps) => {
+export const Card: FC<CardProps> = ({title, subtitle, link, textLink, isBigCard, pictureData}: CardProps) => {
 
   return (
     <article className={`card ${isBigCard ? 'card_large' : ''}`}>
       <Picture
         {...pictureData}
-        className={'card'}
+        className="card"
       />
       <div className="card__content">
         <h3 className={`card__title ${isBigCard ? 't-h1' : 't-h3'}`}>{title}</h3>
