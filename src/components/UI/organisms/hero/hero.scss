@@ -10,40 +10,47 @@
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    padding-top: 125px;
-    min-height: 555px;
+
+
+    @include _680M {
+      min-height: 500px;
+      padding-bottom: 97px;
+    }
 
     @include _992M {
       align-items: center;
-      padding-bottom: 120px;
+      min-height: 555px;
+      padding-top: 125px;
+      padding-bottom: 68px;
     }
 
     @include _992 {
       align-items: flex-end;
     }
 
-    @include _680M {
-      padding-bottom: 70px;
-    }
-
     @include _680 {
       flex-direction: column-reverse;
       align-items: center;
+      min-height: 500px;
       padding-top: 0;
-      padding-bottom: 40px;
+      padding-bottom: 43px;
     }
   }
 
   &__container {
     position: relative;
     display: grid;
-    gap: 22px;
     max-width: 695px;
+
+    @include _992M {
+      gap: 22px;
+    }
 
     @include _992 {
       @include _680M {
         position: relative;
         z-index: 2;
+        gap: 21px;
         max-width: 440px;
       }
     }
@@ -51,9 +58,17 @@
     @include _680 {
       justify-items: center;
       text-align: center;
+      gap: 16px;
     }
+  }
 
-
+  &__subtitle {
+    @include _992 {
+      font-size: 22px;
+    }
+    @include _680 {
+      font-size: 16px;
+    }
   }
 
   &__image {
@@ -64,12 +79,22 @@
     }
 
     @include _992 {
+      position: absolute;
+      height: max-content;
+
       @include _680M {
-        position: absolute;
-        right: -15%;
-        bottom: 0;
+        width: 328px;
+        right: -51px;
+        bottom: 18px;
       }
     }
+
+    @include _680 {
+      width: 330px;
+      top: -27px;
+      left: 8px;
+    }
+
   }
 
   &-bg__picture {

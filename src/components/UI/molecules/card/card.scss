@@ -14,20 +14,26 @@
     padding: 35px 35px 37px;
   }
   @include _992 {
-    @include _468M {
-      padding: 25px 30px 25px 25px;
+    @include _680M {
+      padding: 25px 30px 28px 28px
     }
   }
 
-  @include _468 {
-    padding: 25px;
+  @include _680 {
+    padding: 32px 27px;
   }
 
   &__content {
     display: grid;
-    gap: 22px;
     width: 100%;
     max-width: 635px;
+
+    @include _680M {
+      gap: 22px;
+    }
+    @include _680 {
+      gap: 25px;
+    }
   }
 
   &__image {
@@ -51,6 +57,9 @@
   }
 
   &__title {
+    @include _680M {
+      max-width: 80%;
+    }
     @include _992M {
       max-width: 62%;
     }

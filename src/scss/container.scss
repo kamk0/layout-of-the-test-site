@@ -21,19 +21,25 @@
   }
 
   &_pt {
+    @include _680M {
+      padding-top: 59px;
+    }
     @include _768M {
       padding-top: 60px;
     }
-    @include _768 {
-      padding-top: 50px;
+    @include _680 {
+      padding-top: 51px;
     }
   }
 
   &_pb {
+    @include _680M {
+      padding-bottom: 56px;
+    }
     @include _768M {
       padding-bottom: 60px;
     }
-    @include _768 {
+    @include _680 {
       padding-bottom: 50px;
     }
   }

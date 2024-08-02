@@ -10,7 +10,7 @@ const Header: FC = () => {
   return (
     <header className="header">
       <div className="content header__content">
-        <Link href="#">
+        <Link href="#" className={'header__logo'}>
           <Logo/>
         </Link>
         <Navigation/>

@@ -16,10 +16,10 @@
     font-weight: 800;
     line-height: 1;
     font-style: normal;
-    letter-spacing: -.2px;
 
     @include _680M {
       font-size: 48px;
+      letter-spacing: -.2px;
     }
 
 
@@ -109,14 +109,16 @@
 
   &-text {
     font-weight: 700;
-    line-height: 24px;
+
 
     @include _680M {
       font-size: 16px;
+      line-height: 19px;
     }
 
     @include _992M {
       font-size: 20px;
+      line-height: 24px;
     }
 
     @include _680 {
