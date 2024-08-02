@@ -9,6 +9,7 @@ export interface PictureData {
   width?: number;
   height?: number;
   alt?: string;
+  gradient?: boolean;
 }
 
 export interface PictureProps extends PictureData {

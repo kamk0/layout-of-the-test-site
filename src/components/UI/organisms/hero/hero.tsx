@@ -35,6 +35,7 @@ const Hero: FC = () => {
         <Picture
           {...pictureData}
           className="hero-bg"
+          gradient
         />
       </div>
     </section>

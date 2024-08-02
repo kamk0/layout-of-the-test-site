@@ -19,6 +19,7 @@ export const Card: FC<CardProps> = ({ title, subtitle, link, textLink, isBigCard
       <Picture
         {...pictureData}
         className="card"
+        gradient
       />
       <div className="card__content">
         <h3 className={`card__title ${isBigCard ? 't-h1' : 't-h3'}`}>{title}</h3>
