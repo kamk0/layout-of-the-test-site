@@ -13,15 +13,18 @@
   }
 
   &-h2 {
-    font-weight: 900;
+    font-weight: 800;
     line-height: 1;
-
-    @include _992M {
-      font-size: 72px;
-    }
+    font-style: normal;
+    letter-spacing: -.2px;
 
     @include _680M {
       font-size: 48px;
+    }
+
+
+    @include _992M {
+      font-size: 72px;
     }
 
     @include _680 {
@@ -44,13 +47,13 @@
   &-h4 {
     font-weight: 800;
     line-height: 1.2;
+    letter-spacing: -.1px;
+    @include _680M {
+      font-size: 24px;
+    }
 
     @include _992M {
       font-size: 32px;
-    }
-
-    @include _680M {
-      font-size: 24px;
     }
 
     @include _680 {
@@ -73,12 +76,13 @@
     font-weight: 800;
     line-height: 1.2;
 
-    @include _992M {
-      font-size: 24px;
-    }
 
     @include _680M {
       font-size: 16px;
+    }
+
+    @include _992M {
+      font-size: 24px;
     }
 
     @include _680 {
@@ -90,12 +94,12 @@
     font-size: 32px;
     font-weight: 800;
 
-    @include _992M {
-      font-size: 32px;
-    }
-
     @include _680M {
       font-size: 24px;
+    }
+
+    @include _992M {
+      font-size: 32px;
     }
 
     @include _680 {
@@ -107,12 +111,12 @@
     font-weight: 700;
     line-height: 24px;
 
-    @include _992M {
-      font-size: 20px;
-    }
-
     @include _680M {
       font-size: 16px;
+    }
+
+    @include _992M {
+      font-size: 20px;
     }
 
     @include _680 {
@@ -134,16 +138,16 @@
 
   &-link {
     font-weight: 800;
-
-    @include _992M {
-      font-size: 18px;
-      line-height: 28px;
-    }
+    letter-spacing: -.1px;
 
     @include _680M {
       font-size: 16px;
       line-height: 19px;
+    }
 
+    @include _992M {
+      font-size: 18px;
+      line-height: 28px;
     }
 
     @include _680 {

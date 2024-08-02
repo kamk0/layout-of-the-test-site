@@ -2,16 +2,18 @@
   width: 100vw;
   margin: 0 auto;
 
-  @include _992M {
-    max-width: calc(1088px + 60px);
+
+  @include _468M {
+    padding: 25px 30px;
   }
+
 
   @include _768M {
     padding: 30px 80px;
   }
 
-  @include _468M {
-    padding: 25px 30px;
+  @include _992M {
+    max-width: calc(1088px + 160px);
   }
 
   @include _468 {

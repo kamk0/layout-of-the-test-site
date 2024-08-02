@@ -13,14 +13,16 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1088px;
-    @include _992M {
-      padding-top: 25px;
-      padding-bottom: 20px;
-    }
+    max-width: calc(1088px + 160px);;
+
+
     @include _680M {
       padding-top: 20px;
       padding-bottom: 20px;
+    }
+    @include _992M {
+      padding-top: 24px;
+      padding-bottom: 12px;
     }
     @include _680 {
       padding-top: 10px;

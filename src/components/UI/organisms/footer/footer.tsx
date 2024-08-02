@@ -9,7 +9,7 @@ const Footer: FC = () => {
     <footer className="footer">
       <div className="footer__container">
         <Picture {...pictureData}/>
-        <p className="t-small c-yellow">{text}</p>
+        <p className="t-small c-yellow footer__text">{text}</p>
       </div>
     </footer>
   )

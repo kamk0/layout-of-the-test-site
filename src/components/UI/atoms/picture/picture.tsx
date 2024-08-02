@@ -18,7 +18,7 @@ const Picture = (
 
   return (
     <picture
-      className={`${className}__picture`}
+      className={`picture ${className ? className + '__picture' : ''}`}
     >
       {dataSrc && sources && sources.map((source, index) => {
         if (source.dataSrcset) {
@@ -39,7 +39,7 @@ const Picture = (
 
       {dataSrc && (
         <img
-          className={`${className}__image`}
+          className={`picture__img ${className ? className + '__image' : ''}`}
           src={dataSrc}
           width={width || '350'}
           height={height || '525'}

@@ -32,7 +32,7 @@ export const Cards: FC<CardsProps> = ({cards}: CardsProps) => {
     const isBigCard = index === 0 || index === 3;
 
     return <Card
-      index={id}
+      key={id}
       title={title}
       subtitle={subtitle}
       image={image}

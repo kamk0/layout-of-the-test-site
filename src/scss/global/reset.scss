@@ -11,7 +11,8 @@
 html {
   box-sizing: border-box;
   color: $c-white;
-  background: $c-blue;
+  background: linear-gradient(196.2deg, $c-dark-blue 0%, $c-blue 100%);
+
   width: 100%;
   min-height: 100%;
   margin: 0;
@@ -19,3 +20,5 @@ html {
   font-size: 18px;
   scroll-behavior: smooth
 }
+/* 1248 */
+

@@ -8,9 +8,10 @@
   height: max-content;
   border-radius: 10px;
   overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%);
 
   @include _992M {
-    padding: 35px 80px 35px 35px;
+    padding: 35px 35px 37px;
   }
   @include _992 {
     @include _468M {
@@ -42,6 +43,16 @@
   &_large {
     @include _992M {
       grid-column: span 2;
+    }
+  }
+
+  &_large &__title {
+    max-width: max-content;
+  }
+
+  &__title {
+    @include _992M {
+      max-width: 62%;
     }
   }
 }

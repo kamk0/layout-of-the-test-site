@@ -1,8 +1,10 @@
 .navigation {
+  padding-right: 11px;
+
   &__list {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 56px;
     list-style: none;
 
     @include _680 {
