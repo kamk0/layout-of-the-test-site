@@ -3,7 +3,7 @@ import Button from '../../atoms/button/button';
 import { ButtonTheme } from '../../atoms/button/button.helper';
 import Picture from '../../atoms/picture/picture';
 import { PictureData } from '../../atoms/picture/picture.interfaces';
-import classNames from "classnames";
+import classNames from 'classnames';
 
 type CardProps = {
   title: string;
@@ -23,8 +23,8 @@ export const Card: FC<CardProps> = ({ title, subtitle, link, textLink, isBigCard
         gradient
       />
       <div className="card__content">
-        <h3 className={classNames('card__title', (isBigCard ? 't-h1' : 't-h3'))}>{title}</h3>
-        <p className={classNames('card__subtitle', (isBigCard ? 't-h5' : 't-h6'))}>{subtitle}</p>
+        <h3 className={classNames('card__title', isBigCard ? 't-h1' : 't-h3')}>{title}</h3>
+        <p className={classNames('card__subtitle', isBigCard ? 't-h5' : 't-h6')}>{subtitle}</p>
         <Button
           href={link}
           theme={ButtonTheme.EMPTY}

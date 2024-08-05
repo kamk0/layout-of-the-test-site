@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import Navigation from '../../molecules/navigation/navigation';
 import Logo from '../../atoms/icons/logo/logo';
 import Link from '../../atoms/link/link';
@@ -11,9 +11,9 @@ const Header: FC = () => {
           href="#"
           className="header__logo"
         >
-          <Logo/>
+          <Logo />
         </Link>
-        <Navigation/>
+        <Navigation />
       </div>
     </header>
   );

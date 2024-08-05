@@ -1,5 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const isDeploy = process.env.NODE_ENV !== 'development';
+const envPublicPath = process.env.PUBLIC_PATH || '/';
+
+const publicPath = isDeploy ? envPublicPath : '/';
 
 module.exports = {
   mode: 'development',
@@ -7,7 +15,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    // publicPath: '/layout-of-the-test-site/',
+    publicPath,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -43,9 +51,8 @@ module.exports = {
       {
         test: /\.(ico)$/,
         exclude: /node_modules/,
-        use: ['file-loader?name=[name].[ext]']
-      }
-
+        use: ['file-loader?name=[name].[ext]'],
+      },
     ],
   },
   plugins: [
@@ -58,8 +65,8 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'public'),
       staticOptions: {
-        index: false
-      }
+        index: false,
+      },
     },
     compress: true,
     port: 3000,

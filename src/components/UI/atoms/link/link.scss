@@ -1,7 +1,8 @@
 .link  {
   text-decoration: none;
   color: $c-yellow;
-  transition: $transition;
+  transition: color $transition;
+  cursor: pointer;
 
   &:hover {
     color: $c-yellow-hover;

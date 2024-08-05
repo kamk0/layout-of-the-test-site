@@ -1,0 +1,26 @@
+.toggle-text {
+  &__checkbox {
+    display: none;
+  }
+
+  &__text {
+    max-height: 100px;
+    transition: max-height $transition;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__button {
+    width: max-content;
+    user-select: none;
+  }
+
+  &__checkbox:checked ~ &__text {
+    max-height: 1500px;
+    -webkit-line-clamp: inherit;
+  }
+
+}

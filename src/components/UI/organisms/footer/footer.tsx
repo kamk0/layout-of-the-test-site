@@ -8,9 +8,7 @@ const Footer: FC = () => {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <Picture
-          {...pictureData}
-        />
+        <Picture {...pictureData} />
         <p className="t-small c-yellow footer__text">{text}</p>
       </div>
     </footer>

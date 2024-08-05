@@ -14,6 +14,11 @@ module.exports = {
       jsx: true,
     },
   },
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
   settings: {
     react: {
       version: 'detect',
@@ -30,6 +35,7 @@ module.exports = {
       "bracketSameLine": false,
       "singleAttributePerLine": true,
       "bracketSpacing": true,
+      '@typescript-eslint/no-require-imports': 'off',
     }],
     "max-len": [
       "error",

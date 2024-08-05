@@ -64,7 +64,6 @@
   }
 
   &__image {
-    top: -27px;
     width: 330px;
     height: max-content;
 
@@ -76,8 +75,9 @@
 
     @include _992M {
       position: relative;
-      top: 17px;
+      top: 15px;
       right: -11px;
+      width: 361px;
     }
 
     @include _992 {
@@ -89,6 +89,7 @@
     }
 
     @include _375 {
+      top: -27px;
       left: 8px;
     }
 

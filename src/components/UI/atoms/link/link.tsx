@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import classNames from "classnames";
+import classNames from 'classnames';
 
 type Props = {
   children: React.ReactNode;

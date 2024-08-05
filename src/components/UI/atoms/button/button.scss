@@ -9,7 +9,7 @@
 
   border-radius: 100px;
   background: $c-yellow;
-  transition: $transition;
+  transition: background $transition;
 
   @include _680M {
     min-width: 190px;

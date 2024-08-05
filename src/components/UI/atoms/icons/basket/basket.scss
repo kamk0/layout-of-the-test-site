@@ -2,7 +2,7 @@
   $basket: &;
 
   &__stop {
-    transition: $transition;
+    transition: stop-color $transition;
     stop-color: $c-white
   }
 
