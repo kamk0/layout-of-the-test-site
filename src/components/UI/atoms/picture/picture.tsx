@@ -1,5 +1,6 @@
 import React from 'react';
 import {PictureProps} from './picture.interfaces';
+import classNames from "classnames";
 
 const Picture = (
   {
@@ -11,15 +12,16 @@ const Picture = (
     alt,
     gradient,
   }: PictureProps): React.JSX.Element => {
-  const getImageType = (srcset: string) => {
+  const getImageType = (srcset: string): string | undefined => {
     const parts = srcset.split('.');
-    return parts[parts.length - 1];
+
+    return parts.at(-1);
   };
 
   const gradientClass = gradient ? 'picture_gradient' : '';
 
   return (
-    <picture className={`picture ${className ? className + '__picture' : ''} ${gradientClass}`}>
+    <picture className={classNames('picture', {[`${className}__picture`]: className}, gradientClass)}>
       {sources &&
         sources.map((source, index) => {
           if (source.dataSrcset) {

@@ -1,12 +1,10 @@
 .info-text {
   &__container {
     display: grid;
+    gap: 21px;
 
     @include _680M  {
       gap: 17px;
-    }
-    @include _680 {
-      gap: 21px;
     }
   }
 

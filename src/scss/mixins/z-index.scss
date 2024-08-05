@@ -1,0 +1,23 @@
+$z-indexes: (
+  zero,
+  container,
+  header,
+  navigation,
+  burger,
+);
+
+@function z($element, $list:"") {
+  @if $list == "" {
+    $list: $z-indexes;
+  }
+
+  $z-index: ((index($list, $element) - 1 ) * 10);
+
+  @if $z-index {
+    @return $z-index;
+  }
+
+  @warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+
+  @return null;
+}

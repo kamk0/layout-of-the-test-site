@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
-import { InfoTextRepository } from './infoText.repository';
+import React, {FC} from 'react';
+import {InfoTextRepository} from './infoText.repository';
 import Link from '../../atoms/link/link';
 
 export const InfoText: FC = () => {
-  const { title, subTitle, link } = InfoTextRepository.getInfo();
+  const {title, subTitle, link} = InfoTextRepository.getInfo();
 
   return (
     <section className="info-text">

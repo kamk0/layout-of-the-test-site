@@ -7,13 +7,13 @@
 
   &__content {
     position: relative;
-    z-index: 1;
+    z-index: z('container');
     display: flex;
     justify-content: space-between;
-
+    min-height: 500px;
 
     @include _680M {
-      min-height: 500px;
+      align-items: flex-end;
       padding-bottom: 97px;
     }
 
@@ -24,14 +24,9 @@
       padding-bottom: 68px;
     }
 
-    @include _992 {
-      align-items: flex-end;
-    }
-
     @include _680 {
       flex-direction: column-reverse;
       align-items: center;
-      min-height: 500px;
       padding-top: 0;
       padding-bottom: 43px;
     }
@@ -39,26 +34,23 @@
 
   &__container {
     position: relative;
+    z-index: z('container');
     display: grid;
-    max-width: 695px;
+    gap: 16px;
+
+    @include _680M {
+      gap: 21px;
+      max-width: 440px;
+    }
 
     @include _992M {
       gap: 22px;
-    }
-
-    @include _992 {
-      @include _680M {
-        position: relative;
-        z-index: 2;
-        gap: 21px;
-        max-width: 440px;
-      }
+      max-width: 695px;
     }
 
     @include _680 {
       justify-items: center;
       text-align: center;
-      gap: 16px;
     }
   }
 
@@ -72,6 +64,16 @@
   }
 
   &__image {
+    top: -27px;
+    width: 330px;
+    height: max-content;
+
+    @include _680M {
+      width: 328px;
+      right: -51px;
+      bottom: 18px;
+    }
+
     @include _992M {
       position: relative;
       top: 17px;
@@ -80,18 +82,13 @@
 
     @include _992 {
       position: absolute;
-      height: max-content;
-
-      @include _680M {
-        width: 328px;
-        right: -51px;
-        bottom: 18px;
-      }
     }
 
     @include _680 {
-      width: 330px;
-      top: -27px;
+      left: calc(50% - 165px);
+    }
+
+    @include _375 {
       left: 8px;
     }
 
@@ -101,7 +98,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: z('zero');
     width: 100%;
     height: 100%;
   }

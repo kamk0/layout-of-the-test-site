@@ -1,15 +1,13 @@
 .cards {
   display: grid;
   grid-template-rows: auto;
-  gap: 40px;
+  gap: 30px;
+
+  @include _680M {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @include _992M {
     gap: 40px;
-  }
-  @include _992 {
-    gap: 30px;
-  }
-  @include _680M {
-    grid-template-columns: repeat(2, 1fr);
   }
 }

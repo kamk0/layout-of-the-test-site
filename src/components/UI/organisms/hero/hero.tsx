@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
+import React, {FC} from 'react';
 import Button from '../../atoms/button/button';
-import { HeroRepository } from './hero.repository';
+import {HeroRepository} from './hero.repository';
 import Picture from '../../atoms/picture/picture';
 
 const Hero: FC = () => {

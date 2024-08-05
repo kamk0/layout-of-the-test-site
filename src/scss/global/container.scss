@@ -1,12 +1,11 @@
 .content {
   width: 100vw;
   margin: 0 auto;
+  padding: 25px 20px;
 
-
-  @include _468M {
+  @include _680M {
     padding: 25px 30px;
   }
-
 
   @include _768M {
     padding: 30px 80px;
@@ -16,31 +15,25 @@
     max-width: calc(1088px + 160px);
   }
 
-  @include _468 {
-    padding: 25px 20px;
-  }
-
   &_pt {
+    padding-top: 51px;
+
     @include _680M {
       padding-top: 59px;
     }
     @include _768M {
       padding-top: 60px;
     }
-    @include _680 {
-      padding-top: 51px;
-    }
   }
 
   &_pb {
+    padding-bottom: 50px;
+
     @include _680M {
       padding-bottom: 56px;
     }
     @include _768M {
       padding-bottom: 60px;
-    }
-    @include _680 {
-      padding-bottom: 50px;
     }
   }
 }

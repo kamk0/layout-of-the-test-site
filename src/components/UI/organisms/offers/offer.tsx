@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import { Cards, CardType } from '../../molecules/cards/cards';
-import { OfferRepository } from './offer.repository';
+import React, {FC} from 'react';
+import {Cards, CardType} from '../../molecules/cards/cards';
+import {OfferRepository} from './offer.repository';
 
 export const Offer: FC = () => {
   const cards: CardType[] = OfferRepository.getCards();
@@ -11,7 +11,7 @@ export const Offer: FC = () => {
         <div className="offer__content">
           <div className="offer__container">
             <h2 className="t-h4">Offers</h2>
-            <Cards cards={cards} />
+            <Cards cards={cards}/>
           </div>
         </div>
       </div>

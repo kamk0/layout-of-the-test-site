@@ -1,13 +1,11 @@
 .logo {
   $logo: &;
 
+  width: 73px;
   height: auto;
 
   @include  _992M {
     width: 104px;
-  }
-  @include  _992 {
-    width: 73px;
   }
 
   &__stop {

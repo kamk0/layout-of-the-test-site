@@ -1,18 +1,15 @@
 .header {
   position: fixed;
-  z-index: 2;
+  z-index: z('header');
   display: flex;
   align-content: center;
   justify-content: center;
   width: 100%;
-  background: #000;
+  height: 48px;
+  background: $c-black;
 
   @include _680M {
     height: 80px;
-  }
-
-  @include _680 {
-    height: 48px;
   }
 
   &__content {
@@ -27,8 +24,8 @@
   &__logo {
     @include _680M {
       padding-top: 7px;
-
     }
+
     @include _992M {
       padding-top: 12px;
     }

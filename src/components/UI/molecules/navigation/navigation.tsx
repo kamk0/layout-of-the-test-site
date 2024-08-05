@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, {FC} from 'react';
 import Link from '../../atoms/link/link';
 import Basket from '../../atoms/icons/basket/basket';
 
@@ -14,10 +14,10 @@ const Navigation: FC = () => {
         htmlFor="navi-toggle"
         className="navigation__button"
       >
-        <span className="navigation__icon"></span>
+        <span className="navigation__icon"/>
       </label>
 
-      <div className="navigation__background"></div>
+      <div className="navigation__background"/>
 
       <ul className="navigation__list">
         <li className="navigation__item">
@@ -41,7 +41,7 @@ const Navigation: FC = () => {
             href={'#'}
             className="navigation__text"
           >
-            <Basket />
+            <Basket/>
           </Link>
         </li>
       </ul>

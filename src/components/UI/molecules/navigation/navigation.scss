@@ -1,9 +1,4 @@
 .navigation {
-  //@include _680M {
-  //  padding-right: 25px;
-  //}
-
-
   &__list {
     display: flex;
     align-items: center;
@@ -20,7 +15,7 @@
       position: fixed;
       top: 80px;
       right: 0;
-      z-index: 5;
+      z-index: z('navigation');
       flex-direction: column;
       gap: 20px;
 
@@ -28,7 +23,7 @@
       height: 100vh;
 
       opacity: 0;
-      transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
 
@@ -48,18 +43,19 @@
     padding: 10px 25px;
     transition: $transition;
 
-    &:hover {
-      color: transparent !important;
-    }
-
     @include _992M {
       padding: 10px;
     }
+
     @include _680 {
       text-align: center;
       width: 100%;
       padding-top: 10px;
       padding-bottom: 10px;
+    }
+
+    &:hover {
+      color: transparent !important;
     }
   }
 
@@ -67,13 +63,14 @@
     @include _680M {
       display: none;
     }
+
     @include _680 {
       position: relative;
-      z-index: 6;
+      z-index: z('burger');
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $c-black;
+      background: $c-black;
       height: 30px;
       width: 30px;
       border-radius: 50%;
@@ -88,6 +85,7 @@
     @include _680M {
       display: none;
     }
+
     @include _680 {
       position: absolute;
       top: 15px;
@@ -95,9 +93,9 @@
       height: 20px;
       width: 20px;
       border-radius: 50%;
-      background-image: radial-gradient($c-black, $c-blue);
-      z-index: 4;
-      transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+      background: radial-gradient($c-black, $c-blue);
+      z-index: z('navigation');
+      transition: transform 800ms cubic-bezier(0.86, 0, 0.07, 1);
     }
   }
 
@@ -105,17 +103,19 @@
     @include _680M {
       display: none;
     }
+
     @include _680 {
       position: relative;
+      transition: $transition;
 
       &,
       &::before,
       &::after {
         display: inline-block;
-        background-color: $c-white;
         width: 25px;
         height: 1px;
         border-radius: 2px;
+        background: $c-white;
       }
 
       &::before,
@@ -123,7 +123,7 @@
         content: "";
         position: absolute;
         left: 0;
-        transition: all .2s;
+        transition: $transition;
       }
 
       &::before {
@@ -155,7 +155,8 @@
 
   &__checkbox:checked + &__button &__icon {
     @include _680 {
-      background-color: transparent;
+      background: $c-black;
+      transition: none;
     }
   }
 
