@@ -10,5 +10,16 @@
 
   &__text {
     opacity: .6;
+
+    @include _992M {
+      max-height: max-content;
+      -webkit-line-clamp: inherit;
+    }
   }
+  &__button {
+    @include _992M {
+      display: none;
+    }
+  }
+
 }
